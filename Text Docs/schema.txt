@@ -1,0 +1,120 @@
+# Database Schema
+
+
+## `songs`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `title`           | string    | not null, indexed         |
+| `album_id`        | integer   | not null, indexed         |
+| `source`          | string    | not null                  |
+| `track_num`       | integer   | not null                  |         
+| `date_added`      | date      | not null                  |
+| `duration`        | integer   | not null                  |
+| `plays`           | integer   | not null                  |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ album_id references albums
++ index on `title`
++ index on `album_id`
+
+## `albums`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `name`            | string    | not null, indexed         |
+| `artist_id`       | integer   | not null, indexed         |
+| `year`            | integer   | not null                  |
+| `artwork_source`  | string    | not null                  |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ artist_id references artists
++ index on `name`
++ index on `artist_id`
+
+## `artists`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `name`            | string    | not null, indexed         |
+| `mon_listeners`   | integer   | not null.                 |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ index on `name`
+
+## `playlists`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `owner_id`        | integer   | not null, indexed         |
+| `name`            | string    | not null, indexed         |         
+| `description`     | string    | not null                  |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ owner_id references users
++ index on `name`
++ index on `owner_id`
+
+## `songlist`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `song_id`         | integer   | not null, indexed         |
+| `playlist_id`     | integer   | not null, indexed         |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ song_id references users
++ playlist_id references playlists
++ index on `song_id`
++ index on `playlist_id`
+
+## `users`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `username`        | string    | not null, indexed, unique |
+| `email`           | string    | not null, indexed, unique |         
+| `password_digest` | string    | not null                  |
+| `session_token`   | string    | not null, indexed, unique |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ index on `username, unique: true`
++ index on `email, unique: true`
++ index on `session_token, unique: true`
+
+## `follows`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `user_id`         | integer   | not null, indexed         |
+| `playlist_id`     | integer   | not null, indexed         |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ user_id references users
++ playlist_id references playlists
++ index on `user_id`
++ index on `playlist_id`
+
+## `friends`
+| column name       | data type | details                   |
+|:------------------|:---------:|:--------------------------|
+| `id`              | integer   | not null, primary key     |
+| `owner_id`        | integer   | not null, indexed         |
+| `friend_id`       | integer   | not null, indexed         |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
+
++ owner_id references users
++ friend_id references users
++ index on `owner_id`
++ index on `friend_id`
+
+
+
