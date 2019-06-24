@@ -2,8 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //Components
-import Root from './components/root';
-import configureStore from './store/store';
+// import Root from './components/root';
+// import configureStore from './store/store';
+import * as SessionApiUtil from './util/session_api_util'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,8 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 //     store = configureStore(preloadedState);
 //     delete window.currentUser;
 //   } else {
-    // store = configureStore();
+  let store = configureStore();
 //   }
+  window.dispatch = store.dispatch
+  window.getState = store.getState
+  window.login = SessionApiUtil.login;
+  window.signup = SessionApiUtil.signup;
+  window.logout = SessionApiUtil.logout;
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
