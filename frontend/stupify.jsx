@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 //Components
 import Root from './components/root';
 import configureStore from './store/store';
-// import * as SessionApiUtil from './util/session_api_util'
+import * as ApiUtil from './util/session_api_util';
+import { signup, login, logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 //   let store;  
@@ -20,11 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 //   } else {
   let store = configureStore();
 //   }
-  window.dispatch = store.dispatch;
   window.getState = store.getState;
-  // window.login = SessionApiUtil.login;
-  // window.signup = SessionApiUtil.signup;
-  // window.logout = SessionApiUtil.logout;
+  window.dispatch = store.dispatch;
+  window.signup = signup;
+  window.login = login;
+  window.logout = logout;
+
+  // window.login = ApiUtil.login;
+  // window.signup = ApiUtil.signup;
+  // window.logout = ApiUtil.logout;
 
   const root = document.getElementById('root');
   // ReactDOM.render(<h1>Welcome to stupify from entry</h1>, root);
