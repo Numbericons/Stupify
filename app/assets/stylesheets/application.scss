@@ -10,6 +10,37 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+ //#1DB954  'spotify green'
+
+ @import "./reset.scss";
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Open Sans;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.form-box {
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.welcome {
+    border-bottom: 1px solid grey;
+}

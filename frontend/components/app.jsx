@@ -11,7 +11,7 @@ const App = () => (
   // </div>
   <div>
     <header>
-      <h1>Stupify</h1>
+      <h1>Stupify®</h1>
       <GreetingContainer />
     </header>
 
