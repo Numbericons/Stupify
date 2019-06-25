@@ -3,9 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Components
 import Root from './components/root';
-// import configureStore from './store/store';
+import configureStore from './store/store';
 import * as SessionApiUtil from './util/session_api_util'
-import {createStore} from 'redux';
 
 document.addEventListener('DOMContentLoaded', () => {
 //   let store;  
@@ -19,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
 //     store = configureStore(preloadedState);
 //     delete window.currentUser;
 //   } else {
-  // let store = createStore();
+  let store = configureStore();
 //   }
-  // window.dispatch = store.dispatch
-  // window.getState = store.getState
+  window.dispatch = store.dispatch;
+  window.getState = store.getState;
   window.login = SessionApiUtil.login;
   window.signup = SessionApiUtil.signup;
   window.logout = SessionApiUtil.logout;
