@@ -18,7 +18,8 @@ const Greeting = ({ currentUser, logout }) => {
     </hgroup>
   );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return currentUser ? personalGreeting() : <nav/>;
+  // return currentUser ? personalGreeting() : sessionLinks();
 };
 
 

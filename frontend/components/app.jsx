@@ -14,6 +14,7 @@ const App = () => (
       <div className='stupify-head'>
         {/* <img className='logo' src='http://hatw.co.uk/wp-content/uploads/2015/10/spotify.png'/> */}
         <h1 className='stupify-head-text'>Stupify®</h1>
+        {/* <h6 className="restricted">®</h6> */}
       </div>
       <GreetingContainer />
     </header>
