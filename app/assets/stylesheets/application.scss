@@ -15,31 +15,15 @@
  //#1DB954  'spotify green'
 
  @import "./reset.scss";
-h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 34px;
-    font-weight: bolder;
-    font-family: Open Sans;
-}
-
-
-h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bolder
-}
-
-h5 {
-    font-size: 12px;
-    width: 320px;
-}
+ @import "./buttons.scss";
+ @import "./headers.scss";
 
 .stupify-head {
-    border-bottom: 1px solid grey;
-    height: 70px;
-    margin-top: 20px;
+    border-bottom: 1px solid #dfe0e6;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 .form-box {
     // border: 1px solid black;
@@ -51,37 +35,6 @@ input {
     width: 450px;
     height: 40px;
     font-size: 16px;
-}
-
-.button-cont {
-    display: flex;
-    justify-content: center;
-}
-
-.green-btn {
-    background-color: #1DB954;
-    color: white;
-    border-radius: 20px;
-    width: 380px;
-    height: 45px;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.guest-cont {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.guest-btn {
-    background-color: #3b5998;
-    color: white;
-    border-radius: 20px;
-    width: 380px;
-    height: 45px;
-    font-size: 18px;
 }
 
 .header-name {
@@ -100,25 +53,45 @@ input {
 // }
 
 .logo {
-    width: 45px;
-    height: 45px;
+    width: 90px;
+    height: 90px;
+}
+
+.or-out-cont {
+    display: flex;
+    justify-content: center;
 }
 
 .or-cont {
+    width: 456px;
     display: flex;
     justify-content: center;
 }
 
-.or-bar {
-    display: flex;
-    width: 480px;
-    border-bottom: 1px solid grey;
-    justify-content: center;
+
+
+// .or-bar {
+//     display: flex;
+//     width: 480px;
+//     border-bottom: 1px solid grey;
+//     justify-content: center;
+//     margin-bottom: 10px;
+// }
+
+.or-line {
+    border-bottom: 1px solid #dfe0e6;
     margin-bottom: 10px;
+    width: 228px;
 }
 
-.tos {
-    float: initial;
-    justify-content: center;
+.or-text {
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: translate(0px,-3px);
 }
+// .tos {
+//     float: initial;
+//     justify-content: center;
+// }
 

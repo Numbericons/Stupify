@@ -100,11 +100,16 @@ render(){
     return(
       <div>
         <div className="guest-cont">
-          <button className="guest-btn" onClick={this.guestUser.bind(this)}>SIGN IN AS GUEST</button>
+          <button className="guest-btn" onClick={this.guestUser.bind(this)}>SIGN IN WITH GUESTBOOK</button>
         </div>
-        <div className="or-cont">
-          <div className="or-bar">
+        <div className="or-out-cont">
+          {/* <div className="or-bar">
             <h6>or</h6>
+          </div> */}
+          <div className='or-cont'>
+            <div className='or-line'/>
+            <div className='or-text'>or</div>
+            <div className='or-line'/>
           </div>
         </div>
         <h3 className="welcome">{welcome}</h3>
@@ -123,15 +128,15 @@ render(){
               <br/>
             </label>
 
-            <div className="tos">
+            {/* <div className="tos">
               <h5>By clicking on Sign up, you agree to Stupify's Terms and Conditions of Use.</h5>
               <br/>
               <h5>To learn more about how Spupify collects, uses, shares and protects your 
               personal data please read Stupify's Privacy Policy.</h5>
 
-              <div className="button-cont">
-                <button className="green-btn">{submitText}</button>
-              </div>
+            </div> */}
+            <div className="button-cont">
+              <button className="green-btn">{submitText}</button>
             </div>
           </div>
         </form>

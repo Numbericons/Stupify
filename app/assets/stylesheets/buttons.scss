@@ -1,0 +1,32 @@
+.button-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.green-btn {
+    background-color: #1DB954;
+    color: white;
+    border-radius: 50px;
+    width: 310px;
+    height: 45px;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.guest-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.guest-btn {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 50px;
+    width: 310px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 700;
+}
