@@ -11,7 +11,10 @@ const App = () => (
   // </div>
   <div>
     <header>
-      <h1>Stupify®</h1>
+      <div className='stupify-head'>
+        {/* <img className='logo' src='http://hatw.co.uk/wp-content/uploads/2015/10/spotify.png'/> */}
+        <h1 className='stupify-head-text'>Stupify®</h1>
+      </div>
       <GreetingContainer />
     </header>
 

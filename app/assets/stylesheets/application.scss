@@ -18,17 +18,28 @@
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 34px;
+    font-weight: bolder;
     font-family: Open Sans;
 }
+
 
 h3 {
     display: flex;
     justify-content: center;
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: bolder
 }
 
+h5 {
+    font-size: 12px;
+    width: 320px;
+}
+
+.stupify-head {
+    border-bottom: 1px solid grey;
+    height: 70px;
+}
 .form-box {
     // border: 1px solid black;
     display: flex;
@@ -36,11 +47,77 @@ h3 {
 }
 
 input {
-    width: 400px;
+    width: 450px;
     height: 40px;
     font-size: 16px;
 }
 
-.welcome {
-    border-bottom: 1px solid grey;
+.button-cont {
+    display: flex;
+    justify-content: center;
 }
+
+.green-btn {
+    background-color: #1DB954;
+    color: white;
+    border-radius: 20px;
+    width: 380px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.guest-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.guest-btn {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 20px;
+    width: 380px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.header-name {
+    font-size: 30px;
+}
+
+.header-button {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 10px;
+    width: 110px;
+    height: 30px;
+}
+// .welcome {
+    
+// }
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.or-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.or-bar {
+    display: flex;
+    width: 480px;
+    border-bottom: 1px solid grey;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tos {
+    float: initial;
+    justify-content: center;
+}
+

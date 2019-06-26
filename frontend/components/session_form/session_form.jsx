@@ -76,6 +76,7 @@ class SessionForm extends React.Component {
   renderLogin(){
     return(
       <label>
+        <br/>
         <input onChange={this.update("field")} type="text" value={this.state.field} placeholder='Email address or username'/>
         <br />
       </label>
@@ -98,6 +99,14 @@ render(){
   
     return(
       <div>
+        <div className="guest-cont">
+          <button className="guest-btn" onClick={this.guestUser.bind(this)}>SIGN IN AS GUEST</button>
+        </div>
+        <div className="or-cont">
+          <div className="or-bar">
+            <h6>or</h6>
+          </div>
+        </div>
         <h3 className="welcome">{welcome}</h3>
         
         
@@ -114,9 +123,15 @@ render(){
               <br/>
             </label>
 
-            <div className="button">
-              <button onClick={this.guestUser.bind(this)}>GUEST LOGIN</button>
-              <button>{submitText}</button>
+            <div className="tos">
+              <h5>By clicking on Sign up, you agree to Stupify's Terms and Conditions of Use.</h5>
+              <br/>
+              <h5>To learn more about how Spupify collects, uses, shares and protects your 
+              personal data please read Stupify's Privacy Policy.</h5>
+
+              <div className="button-cont">
+                <button className="green-btn">{submitText}</button>
+              </div>
             </div>
             
               
