@@ -17,6 +17,7 @@
  @import "./reset.scss";
  @import "./buttons.scss";
  @import "./headers.scss";
+ @import "./lines.scss";
 
 .stupify-head {
     border-bottom: 1px solid #dfe0e6;
@@ -41,15 +42,12 @@ input {
     font-size: 30px;
 }
 
-.header-button {
-    background-color: #3b5998;
-    color: white;
-    border-radius: 10px;
-    width: 110px;
-    height: 30px;
-}
-// .welcome {
-    
+// .header-button {
+//     background-color: #3b5998;
+//     color: white;
+//     border-radius: 10px;
+//     width: 110px;
+//     height: 30px;
 // }
 
 .logo {
@@ -57,41 +55,16 @@ input {
     height: 90px;
 }
 
-.or-out-cont {
-    display: flex;
-    justify-content: center;
-}
-
-.or-cont {
-    width: 456px;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-// .or-bar {
-//     display: flex;
-//     width: 480px;
-//     border-bottom: 1px solid grey;
-//     justify-content: center;
-//     margin-bottom: 10px;
-// }
-
-.or-line {
-    border-bottom: 1px solid #dfe0e6;
-    margin-bottom: 10px;
-    width: 228px;
-}
-
-.or-text {
-    align-self: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    transform: translate(0px,-3px);
-}
 // .tos {
 //     float: initial;
 //     justify-content: center;
 // }
 
+.login-errors {
+    display: flex;
+    justify-content: center;
+}
+
+.li-error {
+    color: red;
+}

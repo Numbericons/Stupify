@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -28,9 +28,9 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className='login-errors'>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className='li-error' key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -71,18 +71,37 @@ class SessionForm extends React.Component {
       )
   }
   
-  
-
   renderLogin(){
     return(
       <label>
         <br/>
-        <input onChange={this.update("field")} type="text" value={this.state.field} placeholder='Email address or username'/>
+          <input onChange={this.update("field")} type="text" value={this.state.field} placeholder='Email address or username'/>
         <br />
       </label>
     )
   }
-render(){
+
+  renderSignUpInstead(){
+    if (this.props.formType === "login") {
+      return(
+      <div>
+        <div className='or-cont'>
+            <div className='or-line-extd'/>
+        </div>
+        <h2>Don't have an account?</h2>
+        <div className="signup-btn-cont">
+          <Link to="/signup">
+            <button className="signup-btn">SIGN UP FOR STUPIFY</button>
+          </Link>
+        </div>
+      </div>
+      ) 
+    } else {
+      return (<nav/>)
+    }
+  }
+
+  render(){
     let formType;
     let welcome;
     let submitText;
@@ -99,13 +118,16 @@ render(){
   
     return(
       <div>
+        <header>
+          <div className='stupify-head'>
+            <img className='logo' src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fsimple-icons%2F512%2Fspotify-512-black.png&f=1"/>
+            <h1 className='stupify-head-text'>Stupify</h1>
+          </div>
+        </header>
         <div className="guest-cont">
           <button className="guest-btn" onClick={this.guestUser.bind(this)}>SIGN IN WITH GUESTBOOK</button>
         </div>
         <div className="or-out-cont">
-          {/* <div className="or-bar">
-            <h6>or</h6>
-          </div> */}
           <div className='or-cont'>
             <div className='or-line'/>
             <div className='or-text'>or</div>
@@ -138,6 +160,7 @@ render(){
             <div className="button-cont">
               <button className="green-btn">{submitText}</button>
             </div>
+            {this.renderSignUpInstead()}
           </div>
         </form>
       </div>

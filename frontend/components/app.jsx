@@ -5,23 +5,24 @@ import LogInFormContainer from './session_form/login_form_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-const App = () => (
-  // <div>
-  //   <h1>Stupify (from app.jsx)</h1>
-  // </div>
-  <div>
-    <header>
+// const Auth = () => {
+// }
+
+const App = () => {
+
+  return (
+    <div>
+    {/* <header>
       <div className='stupify-head'>
         <img className='logo' src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fsimple-icons%2F512%2Fspotify-512-black.png&f=1"/>
-        {/* <img className='logo' src='http://hatw.co.uk/wp-content/uploads/2015/10/spotify.png'/> */}
         <h1 className='stupify-head-text'>Stupify</h1>
       </div>
-      <GreetingContainer />
-    </header>
-
+    </header> */}
+    <Route path="/" component={GreetingContainer}/>
     <AuthRoute path="/login" component={LogInFormContainer} />
     <AuthRoute path="/signup" component={SignUpFormContainer} />
   </div>
-);
+  )
+};
 
 export default App;

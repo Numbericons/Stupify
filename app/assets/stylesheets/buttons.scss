@@ -12,6 +12,11 @@
     font-size: 15px;
     margin-top: 10px;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.green-btn:hover {
+    opacity: .85;
 }
 
 .guest-cont {
@@ -29,4 +34,34 @@
     height: 45px;
     font-size: 15px;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.guest-btn:hover {
+    opacity: .85;
+}
+
+.signup-btn-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-btn {
+    font-family: 'Cabin', sans-serif;
+    color: #9b9b9b;
+    border-color: #9b9b9b;
+    border-radius: 50px;
+    border-width: 2.25px; 
+    width: 310px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.signup-btn:hover {
+    background-color: #616467;
+    color: white;
+    // opacity: .85;
 }
