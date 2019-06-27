@@ -14,8 +14,8 @@ class Artist < ApplicationRecord
     validates :name, :mon_listeners, :image_url, presence: true
 
     has_many :albums
-    
-    has_many :songs,
-    through: :albums,
-    source: :songs
+
+    # has_many :songs,
+    # through: :albums,
+    # source: :songs
 end

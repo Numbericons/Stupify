@@ -1,0 +1,2 @@
+class Songlist < ApplicationRecord
+end

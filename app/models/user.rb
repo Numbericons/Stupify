@@ -17,6 +17,10 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
     attr_reader :password
 
+    has_many :playlists,
+    foreign_key: :owner_id,
+    class_name: 'Playlist'
+
     def self.find_by_credentials(field, password)
         user = User.find_by(username: field) || User.find_by(email: field)
         user && user.is_password?(password) ? user : nil
