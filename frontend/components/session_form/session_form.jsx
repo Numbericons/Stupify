@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       this.props.processForm({field: 'demo', password: '123456'});
     } else {
-      this.props.guestLogin({field: 'guest', password: '123456'});
+      this.props.guestLogin({field: 'demo', password: '123456'});
     }
   }
 
