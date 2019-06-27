@@ -14,4 +14,7 @@
 class Album < ApplicationRecord
     validates :name, :artist_id, :year, :cover_art_url, presence: true
 
+    belongs_to :artist
+    
+    has_many :songs
 end
