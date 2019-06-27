@@ -150,13 +150,6 @@ class SessionForm extends React.Component {
               <br/>
             </label>
 
-            {/* <div className="tos">
-              <h5>By clicking on Sign up, you agree to Stupify's Terms and Conditions of Use.</h5>
-              <br/>
-              <h5>To learn more about how Spupify collects, uses, shares and protects your 
-              personal data please read Stupify's Privacy Policy.</h5>
-
-            </div> */}
             <div className="button-cont">
               <button className="green-btn">{submitText}</button>
             </div>

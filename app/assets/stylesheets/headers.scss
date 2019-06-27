@@ -34,6 +34,24 @@ h5 {
     // font-family: Circular, Helvetica, Arial, sans-serif;
 }
 
+.header-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-name {
+    font-size: 30px;
+    width: 200px;
+}
+
 .stupify-head-text {
     margin-top: 25px;
+}
+
+.stupify-head {
+    border-bottom: 1px solid #dfe0e6;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
