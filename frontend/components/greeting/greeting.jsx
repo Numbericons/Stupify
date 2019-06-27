@@ -8,23 +8,15 @@ const Greeting = ({ currentUser, logout, location }) => {
     return null;
   }
 
-  const navBar = () => (
-    <nav className='nav-bar'>
-      <h5>Spotify</h5>
-      <div>
-        <h6>Profile</h6>
-      </div>
-    </nav>
-  )
   const sessionLinks = () => (
     <div>
       <div className='splash-back'>
-        <div className='nav-bar'>
+        <div className='nav-bar-auth'>
           <div className='div-flex'>
           
             {/* <img className='nav-logo' src="https://png.pngtree.com/png-clipart/20190515/original/pngtree-spotify-social-media-icon-design-template-vector-png-image_3654774.jpg"/> */}
-            {/* <img className='nav-logo' src="https://i.ya-webdesign.com/images/spotify-logo-black-png-6.png"/> */}
-            <img className='nav-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkTSOGtXE8Co1jnD5Y7bFMWw26LH_wY1rPztQFE0mje6M9Nwz"/>
+            <img className='nav-logo' src="https://i.ya-webdesign.com/images/spotify-logo-black-png-6.png"/>
+            {/* <img className='nav-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkTSOGtXE8Co1jnD5Y7bFMWw26LH_wY1rPztQFE0mje6M9Nwz"/> */}
             {/* <img className='nav-logo' src="https://image.flaticon.com/icons/png/512/121/121148.png"/> */}
             <h1 className='nav-head-text'>Stupify</h1>
           </div>
@@ -38,10 +30,14 @@ const Greeting = ({ currentUser, logout, location }) => {
   );
   const personalGreeting = () => (
     <div className='splash-back'>
-      <hgroup className="header-cont">
-        <h6 className="header-name">Hi, {currentUser.username}!</h6>
-        <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
+      <div className='nav-bar-curr-user'>
+        <div className='div-flex'>
+          <hgroup className="header-cont">
+            <h6 className="header-name">Hi, {currentUser.username}!</h6>
+            <button className="header-button" onClick={logout}>Log Out</button>
+          </hgroup>
+        </div>
+      </div>
     </div>
   );
 
