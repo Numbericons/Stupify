@@ -41,9 +41,9 @@ class SessionForm extends React.Component {
   guestUser(e) {
     e.preventDefault();
     if (this.props.formType === 'login') {
-      this.props.processForm({field: 'testuser', password: 'testuser'});
+      this.props.processForm({field: 'demo', password: '123456'});
     } else {
-      this.props.guestLogin({field: 'testuser', password: 'testuser'});
+      this.props.guestLogin({field: 'guest', password: '123456'});
     }
   }
 
