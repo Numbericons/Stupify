@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: albums
+#
+#  id            :bigint           not null, primary key
+#  name          :string           not null
+#  artist_id     :integer          not null
+#  year          :integer          not null
+#  cover_art_url :string           not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # This model initially had no columns defined. If you add columns to the

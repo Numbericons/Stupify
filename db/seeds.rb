@@ -8,6 +8,7 @@
 # email = potterArr.map{|capStr| capStr.split("").reject{|char| char == " " }.join("").downcase}
 
 User.create(username: 'Demo User', email: 'demo', password: '123456')
+
 domains = [".com", '.co', '.edu', '.uk']
 symbols = "!@#$%^&*()-+=[];:,<>/?'|\`~ "
 
