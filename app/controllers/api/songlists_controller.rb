@@ -1,4 +1,4 @@
-class Api::SessionsController < ApplicationController
+class Api::SonglistsController < ApplicationController
     def create
         @songlist = Songlist.new
         @songlist.song_id = params[:song_id]

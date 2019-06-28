@@ -1,4 +1,4 @@
-class Api::SessionsController < ApplicationController
+class Api::PlaylistsController < ApplicationController
     def show
         @playlist = Playlist.find_by(id: params[:id])
         render :show
@@ -19,9 +19,11 @@ class Api::SessionsController < ApplicationController
     end
 
     def destroy
-        @playlist = Playlist.find_by(id: params[:id])
-        Playlist.destroy(@playlist)
-        render "api/playlists/show"
+        debugger
+        playlist = Playlist.find_by(id: params[:id])
+        Playlist.destroy(playlist.id) if playlist
+        @playlists = Playlist.all
+        render "api/playlists/index"
     end
 
     def playlist_params

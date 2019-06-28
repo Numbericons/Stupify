@@ -6,6 +6,8 @@ import Root from './components/root';
 import configureStore from './store/store';
 import * as ApiUtil from './util/session_api_util';
 import { signup, login, logout } from './actions/session_actions';
+import { fetchSong } from './util/song_api_util';
+import * as PlaylistApiUtil from './util/playlist_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -26,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signup = signup;
   window.login = login;
   window.logout = logout;
+  window.fetchSong = fetchSong;
+  window.fetchPlaylists = PlaylistApiUtil.fetchPlaylists;
+  window.fetchPlaylist = PlaylistApiUtil.fetchPlaylist;
+  window.removePlaylist = PlaylistApiUtil.removePlaylist;
 
-  // window.login = ApiUtil.login;
-  // window.signup = ApiUtil.signup;
-  // window.logout = ApiUtil.logout;
 
   const root = document.getElementById('root');
-  // ReactDOM.render(<h1>Welcome to stupify from entry</h1>, root);
   ReactDOM.render(<Root store={store} />, root);
 });
