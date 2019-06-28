@@ -10,7 +10,9 @@ class Api::PlaylistsController < ApplicationController
     end
 
     def create
+        debugger
         @playlist = Playlist.new(playlist_params)
+        @playlist.owner_id = current_user.id
         if @playlist.save
             render 'api/playlists/show'
         else
@@ -19,7 +21,6 @@ class Api::PlaylistsController < ApplicationController
     end
 
     def destroy
-        debugger
         playlist = Playlist.find_by(id: params[:id])
         Playlist.destroy(playlist.id) if playlist
         @playlists = Playlist.all

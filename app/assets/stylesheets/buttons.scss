@@ -1,4 +1,4 @@
-.header-button {
+.logout-btn {
     background-color: #1DB954;
     color: white;
     border-radius: 10px;
@@ -11,8 +11,8 @@
     justify-content: center;
 }
 
-.green-btn {
-    background-color: #1DB954;
+.btn {
+    font-family: 'Cabin', sans-serif;
     color: white;
     border-radius: 50px;
     width: 310px;
@@ -23,8 +23,12 @@
     cursor: pointer;
 }
 
-.green-btn:hover {
+.btn:hover {
     opacity: .85;
+}
+
+.green-btn {
+    background-color: #1DB954;
 }
 
 .guest-cont {
@@ -36,17 +40,6 @@
 
 .guest-btn {
     background-color: #3b5998;
-    color: white;
-    border-radius: 50px;
-    width: 310px;
-    height: 45px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.guest-btn:hover {
-    opacity: .85;
 }
 
 .signup-btn-cont {
@@ -55,21 +48,15 @@
 }
 
 .signup-btn {
-    font-family: 'Cabin', sans-serif;
     color: #9b9b9b;
     border-color: #9b9b9b;
     border-radius: 50px;
     border-width: 2.25px; 
-    width: 310px;
-    height: 45px;
-    font-size: 15px;
     font-weight: 900;
-    cursor: pointer;
     margin-top: 25px;
 }
 
 .signup-btn:hover {
     background-color: #616467;
     color: white;
-    // opacity: .85;
 }

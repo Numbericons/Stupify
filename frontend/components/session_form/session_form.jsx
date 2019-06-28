@@ -90,8 +90,8 @@ class SessionForm extends React.Component {
         </div>
         <h2>Don't have an account?</h2>
         <div className="signup-btn-cont">
-          <Link to="/signup">
-            <button className="signup-btn">SIGN UP FOR STUPIFY</button>
+          <Link to="/signup" onClick={this.props.clearErrors}>
+            <button className="btn signup-btn">SIGN UP FOR STUPIFY</button>
           </Link>
         </div>
       </div>
@@ -125,7 +125,7 @@ class SessionForm extends React.Component {
           </div>
         </header>
         <div className="guest-cont">
-          <button className="guest-btn" onClick={this.guestUser.bind(this)}>SIGN IN WITH GUESTBOOK</button>
+          <button className="btn guest-btn" onClick={this.guestUser.bind(this)}>SIGN IN WITH GUESTBOOK</button>
         </div>
         <div className="or-out-cont">
           <div className='or-cont'>
@@ -151,7 +151,7 @@ class SessionForm extends React.Component {
             </label>
 
             <div className="button-cont">
-              <button className="green-btn">{submitText}</button>
+              <button className="btn green-btn">{submitText}</button>
             </div>
             {this.renderSignUpInstead()}
           </div>

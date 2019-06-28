@@ -24,6 +24,6 @@ symbols = "!@#$%^&*()-+=[];:,<>/?'|\`~ "
     location = Faker::Movies::HarryPotter.location
     site = location.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
 
-    email = emailName + "@" + site + domains[rand(4)]
+    email = emailName + rand(100).to_s + "@" + site + domains[rand(4)]
     User.create(username: newUser, email: email, password: '123456')
 end

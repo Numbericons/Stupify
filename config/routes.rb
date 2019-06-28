@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :songs, only: [:show]
     resources :playlists, only: [:show, :index, :create, :destroy] do
-      resources :songlist, only: [:create, :destroy]
+      resources :songlists, only: [:create, :destroy]
     end
   end
   root "static_pages#root"

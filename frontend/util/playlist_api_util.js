@@ -19,3 +19,11 @@ export const removePlaylist = id => (
     url: `api/playlists/${id}`
   })
 );
+
+export const addPlaylist = data => (
+    $.ajax({
+        method: 'POST',
+        url: 'api/playlists',
+        data: { playlist:  data }
+    })
+)
