@@ -9,16 +9,16 @@
 
 User.create(username: 'Demo User', email: 'demo', password: '123456')
 
-# domains = [".com", '.co', '.edu', '.uk']
-# symbols = "!@#$%^&*()-+=[];:,<>/?'|\`~ "
+domains = [".com", '.co', '.edu', '.uk']
+symbols = "!@#$%^&*()-+=[];:,<>/?'|\`~ "
 
-# 50.times do
-#     newUser = Faker::Movies::HarryPotter.character
-#     emailName = newUser.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
+50.times do
+    newUser = Faker::Movies::HarryPotter.character
+    emailName = newUser.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
 
-#     location = Faker::Movies::HarryPotter.location
-#     site = location.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
+    location = Faker::Movies::HarryPotter.location
+    site = location.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
 
-#     email = emailName + "@" + site + domains[rand(4)]
-#     User.create(username: newUser, email: email, password: '123456')
-# end
+    email = emailName + "@" + site + domains[rand(4)]
+    User.create(username: newUser, email: email, password: '123456')
+end
