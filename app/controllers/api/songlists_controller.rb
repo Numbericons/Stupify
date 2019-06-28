@@ -1,18 +1,24 @@
 class Api::SonglistsController < ApplicationController
     def create
         @songlist = Songlist.new
-        @songlist.song_id = params[:song_id]
-        @songlist.playlist_id = params[:playlist_id]
+        @songlist.song_id = params[:songlist][:song_id]
+        @songlist.playlist_id = params[:songlist][:playlist_id]
+        # debugger
         if @songlist.save
-            render "api/songs/show"
+            render json: [@songlist]
+            # render "api/songs/show"
         else
             render json: @songlist.errors.full_messages, status: 422
         end
     end
-
+    
     def destroy
         @songlist = Songlist.find_by(id: params[:id])
-        Songlist.destroy(@songlist.id) if @songlist
-        render "api/playlists/show"
+        if @songlist
+            Songlist.destroy(@songlist.id)
+            render json: ['success!']
+        else
+            render json: ['failure!']
+        end
     end
 end

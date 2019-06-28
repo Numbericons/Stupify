@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 //Components
 import Root from './components/root';
 import configureStore from './store/store';
-import * as ApiUtil from './util/session_api_util';
-import { fetchSong } from './util/song_api_util';
+import { fetchSong } from './actions/song_actions';
+// import { fetchSong } from './util/song_api_util';
 import * as PlaylistApiUtil from './util/playlist_api_util';
 import * as SonglistApiUtil from './util/songlist_api_util';
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  
+
   window.addSonglist = SonglistApiUtil.addSonglist;
   window.removeSonglist = SonglistApiUtil.removeSonglist;
 
