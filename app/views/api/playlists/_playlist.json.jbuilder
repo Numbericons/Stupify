@@ -1,0 +1,1 @@
+json.extract! playlist, :id, :owner_id, :name, :description
