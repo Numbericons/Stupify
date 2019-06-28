@@ -1,12 +1,12 @@
 class Api::SessionsController < ApplicationController
     def show
         @playlist = Playlist.find_by(id: params[:id])
-        render: show
+        render :show
     end
 
     def index
         @playlists = Playlist.all
-        render: index
+        render :index
     end
 
     def create
