@@ -15,7 +15,7 @@ export const receivePlaylist = playlist => ({
   playlist
 });
 
-export const removePlaylist = playlist => ({
+export const deletePlaylist = playlist => ({
   type: REMOVE_PLAYLIST,
   playlistId: paylist.id
 });
@@ -32,8 +32,8 @@ export const fetchPlaylist = id => dispatch => (
     ))
 );
 
-export const deletePlaylist = id => dispatch => (
-    APIUtil.deletePlaylist(id).then(playlist => (
-        dispatch(removePlaylist(playlist))
+export const removePlaylist = id => dispatch => (
+    APIUtil.removePlaylist(id).then(playlist => (
+        dispatch(deletePlaylist(playlist))
     ))
 );
