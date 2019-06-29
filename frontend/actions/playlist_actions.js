@@ -2,7 +2,7 @@ import * as APIUtil from '../util/playlist_api_util';
 
 export const RECEIVE_PLAYLIST = 'RECEIVE_PLAYLIST';
 export const RECEIVE_PLAYLISTS = 'RECEIVE_PLAYLISTS';
-export const REMOVE_PLAYLISTS = 'REMOVE_PLAYLISTS';
+export const REMOVE_PLAYLIST = 'REMOVE_PLAYLIST';
 
 
 export const receivePlaylists = playlists => ({
@@ -16,14 +16,17 @@ export const receivePlaylist = playlist => ({
 });
 
 export const deletePlaylist = playlist => ({
+
   type: REMOVE_PLAYLIST,
-  playlistId: paylist.id
+  playlistId: playlist.id
 });
 
 export const fetchPlaylists = () => dispatch => (
-    APIUtil.fetchPlaylists().then(playlists => (
-        dispatch(receivePlaylists(playlists))
-    ))
+    APIUtil.fetchPlaylists().then(playlists => {
+        return (
+          dispatch(receivePlaylists(playlists))
+        )
+    })
 );
 
 export const fetchPlaylist = id => dispatch => (
@@ -33,7 +36,8 @@ export const fetchPlaylist = id => dispatch => (
 );
 
 export const removePlaylist = id => dispatch => (
+    
     APIUtil.removePlaylist(id).then(playlist => (
-        dispatch(deletePlaylist(playlist))
+        dispatch(deletePlaylist(id))
     ))
 );

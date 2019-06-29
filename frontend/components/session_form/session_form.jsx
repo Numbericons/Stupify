@@ -88,7 +88,7 @@ class SessionForm extends React.Component {
         <div className='or-cont'>
             <div className='or-line-extd'/>
         </div>
-        <h2>Don't have an account?</h2>
+        <h3>Don't have an account?</h3>
         <div className="signup-btn-cont">
           <Link to="/signup" onClick={this.props.clearErrors}>
             <button className="btn signup-btn">SIGN UP FOR STUPIFY</button>
@@ -134,7 +134,7 @@ class SessionForm extends React.Component {
             <div className='or-line'/>
           </div>
         </div>
-        <h3 className="welcome">{welcome}</h3>
+        <h4 className="welcome">{welcome}</h4>
         
         
         <div className="errors">{this.renderErrors()}</div>

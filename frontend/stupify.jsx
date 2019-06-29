@@ -32,14 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.removeSonglist = SonglistApiUtil.removeSonglist;
 
   window.fetchSong = fetchSong;
+  
   window.fetchPlaylist = fetchPlaylist;
   window.fetchPlaylists = fetchPlaylists;
   window.deletePlaylist = deletePlaylist;
 
-  window.fetchPlaylists = PlaylistApiUtil.fetchPlaylists;
-  window.addPlaylist = PlaylistApiUtil.addPlaylist;
-  window.fetchPlaylist = PlaylistApiUtil.fetchPlaylist;
-  window.removePlaylist = PlaylistApiUtil.removePlaylist;
+  // window.fetchPlaylists = PlaylistApiUtil.fetchPlaylists;
+  // window.addPlaylist = PlaylistApiUtil.addPlaylist;
+  // window.fetchPlaylist = PlaylistApiUtil.fetchPlaylist;
+  // window.removePlaylist = PlaylistApiUtil.removePlaylist;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
