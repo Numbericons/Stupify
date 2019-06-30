@@ -35,9 +35,12 @@ export const fetchPlaylist = id => dispatch => (
     ))
 );
 
-export const removePlaylist = id => dispatch => (
-    
-    APIUtil.removePlaylist(id).then(playlist => (
-        dispatch(deletePlaylist(id))
-    ))
-);
+export const removePlaylist = id => dispatch => {
+    return (
+      APIUtil.removePlaylist(id).then(playlist => {
+          return ( 
+            dispatch(deletePlaylist(id))
+          )
+      })
+    );
+};
