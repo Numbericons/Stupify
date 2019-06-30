@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addPlaylist: playlist => dispatch(addPlaylist(playlist)),
+    addPlaylist: playlist => dispatch(addPlaylist(playlist))
   };
 };
 

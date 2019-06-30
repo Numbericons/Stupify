@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return ({
         fetchPlaylists: () => dispatch(fetchPlaylists()),
-        deletePlaylist: id => dispatch(deletePlaylist(id))
+        removePlaylist: id => dispatch(removePlaylist(id))
     })
 };
 

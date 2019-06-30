@@ -34,6 +34,9 @@ const Greeting = ({ currentUser, logout, location }) => {
           </hgroup>
         </div>
       </div>
+      <div className="index-link-cont">
+        <Link className="index-link" to="/playlists">Playlist Index</Link>
+      </div>
     </div>
   );
 

@@ -9,12 +9,12 @@ class PlaylistIndex extends React.Component {
   }
 
   render() {
-    const Playlists = this.props.playlists.map(Playlist => {
+    const playlists = this.props.playlists.map(playlist => {
       return (
         <PlaylistIndexItem
-          key={Playlist.id}
-          Playlist={Playlist}
-          deletePlaylist={this.props.deletePlaylist} />
+          key={playlist.id}
+          playlist={playlist}
+          removePlaylist={this.props.removePlaylist} />
       );
     });
     
@@ -23,7 +23,7 @@ class PlaylistIndex extends React.Component {
         <h5>Hello from Playlist index!</h5>
         <h5>put your feet up! Have a drink!</h5>
         <ul>
-          {Playlists}
+          {playlists}
         </ul>
         <CreatePlaylistFormContainer />
       </div>

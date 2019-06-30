@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const PlaylistIndexItem = ({ Playlist, deletePlaylist }) => {
+const PlaylistIndexItem = ({ playlist, removePlaylist }) => {
   return (
     <li>
-      <Link to={`/playlists/${Playlist.id}`}>
-        {Playlist.name}
+      <Link to={`/playlists/${playlist.id}`}>
+        {playlist.name}
       </Link>&nbsp;
-      <button onClick={() => deletePlaylist(Playlist.id)}>Delete</button>
+      <button onClick={() => removePlaylist(playlist.id)}>Delete</button>
     </li>);
 };
 

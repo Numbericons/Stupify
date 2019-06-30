@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 class PlaylistShow extends React.Component {
   componentDidMount() {
+      debugger
     this.props.fetchPlaylist(this.props.match.params.playlistId);
   }
 
@@ -20,8 +21,9 @@ class PlaylistShow extends React.Component {
 
     return (
       <div>
+        <h5>Playlist Show!</h5>
         <h3>{playlist.name}</h3>
-        <Link to="/">Back to Index(Home)</Link>
+        <Link to="/playlists">Back to all my Playlists!</Link>
       </div>
     );
   }

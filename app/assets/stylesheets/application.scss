@@ -37,10 +37,19 @@
     background-position-y: -375px;
 }
 
-
-
 .div-flex {
     display: flex;
     width:150px;
 }
 
+.index-link-cont {
+    display: flex;
+    align-items: flex-end;
+    height: 110px;
+}
+
+.index-link {
+    font-size: 22px;
+    font-weight: 500;
+    color: #3b5998;
+}
