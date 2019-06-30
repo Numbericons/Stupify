@@ -2,7 +2,8 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import { Route } from 'react-router-dom';
+import PlaylistIndexContainer from './playlist/playlist_index_container'
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 // const Auth = () => {
@@ -18,10 +19,12 @@ const App = () => {
         <h1 className='stupify-head-text'>Stupify</h1>
       </div>
     </header> */}
-    <Route path="/" component={GreetingContainer}/>
-    <AuthRoute path="/login" component={LogInFormContainer} />
-    <AuthRoute path="/signup" component={SignUpFormContainer} />
-    {/* <Route path="/playlists" component={PlaylistIndexContainer} /> */}
+    <Switch>
+      <Route exact path="/" component={GreetingContainer}/>
+      <AuthRoute exact path="/login" component={LogInFormContainer} />
+      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <Route exact path="/playlists" component={PlaylistIndexContainer} />
+    </Switch>
     </div>
   )
 };

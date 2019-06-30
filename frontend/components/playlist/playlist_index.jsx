@@ -9,7 +9,7 @@ class PlaylistIndex extends React.Component {
   }
 
   render() {
-    const Playlists = this.props.Playlists.map(Playlist => {
+    const Playlists = this.props.playlists.map(Playlist => {
       return (
         <PlaylistIndexItem
           key={Playlist.id}
@@ -21,6 +21,7 @@ class PlaylistIndex extends React.Component {
     return (
       <div>
         <h5>Hello from Playlist index!</h5>
+        <h5>put your feet up! Have a drink!</h5>
         <ul>
           {Playlists}
         </ul>

@@ -27,6 +27,6 @@ class Api::PlaylistsController < ApplicationController
     end
 
     def playlist_params
-        params.require(:playlist).permit(:name, :description) #owner_id from params?
+        params.require(:playlist).permit(:name) #owner_id from params?
     end
 end

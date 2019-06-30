@@ -16,7 +16,8 @@ class PlaylistForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.addPlaylist(this.state).then(() => this.props.history.push('/')); //push to playlist/show?
+    this.props.addPlaylist(this.state)
+    // this.props.addPlaylist(this.state).then(() => this.props.history.push('/')); //push to playlist/show?
   }
 
   render () {

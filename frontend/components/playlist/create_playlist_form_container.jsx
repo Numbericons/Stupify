@@ -4,7 +4,7 @@ import PlaylistForm from './playlist_form';
 import { addPlaylist } from '../../actions/playlist_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  const playlist = { title: '', body: '' };
+  const playlist = { name: '' };
 
   return { playlist };
 };
