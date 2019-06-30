@@ -10,7 +10,6 @@ class Api::PlaylistsController < ApplicationController
     end
 
     def create
-        debugger
         @playlist = Playlist.new(playlist_params)
         @playlist.owner_id = current_user.id
         if @playlist.save

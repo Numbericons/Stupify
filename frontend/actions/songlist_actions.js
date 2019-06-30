@@ -3,8 +3,7 @@ import { fetchPlaylist, receivePlaylist } from './playlist_actions';
 
 export const addSonglist = (playlist_id, song_id) => dispatch => {
     return (
-        APIUtil.addSonglist(playlist_id, song_id).then(playlist => {
-            debugger
+        APIUtil.addSonglist(playlist_id, song_id).then(id => {
             return (
                 dispatch(fetchPlaylist(id))
             )
@@ -14,7 +13,7 @@ export const addSonglist = (playlist_id, song_id) => dispatch => {
 
 export const removeSonglist = (playlist_id, song_id) => dispatch => {
     return (
-        APIUtil.removeSonglist(playlist_id, song_id).then(playlist => {
+        APIUtil.removeSonglist(playlist_id, song_id).then(id => {
             return (
                 dispatch(fetchPlaylist(id))
             )

@@ -21,6 +21,10 @@ class Song < ApplicationRecord
 
     has_many :playlists
 
+    has_many :playlists,
+    through: :songlists,
+    source: :playlist
+
     has_one_attached :song
 
     # belongs_to :artist,

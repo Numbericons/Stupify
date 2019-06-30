@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { fetchSong } from './actions/song_actions';
-import { fetchPlaylists, fetchPlaylist, removePlaylist } from './actions/playlist_actions';
+import { addPlaylist, fetchPlaylists, fetchPlaylist, removePlaylist } from './actions/playlist_actions';
 import { addSonglist, removeSonglist } from './actions/songlist_actions';
 // import { fetchSong } from './util/song_api_util';
 import * as PlaylistApiUtil from './util/playlist_api_util';
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchSong = fetchSong;
 
+
+  window.addPlaylist = addPlaylist;
   window.fetchPlaylist = fetchPlaylist;
   window.fetchPlaylists = fetchPlaylists;
   window.removePlaylist = removePlaylist;

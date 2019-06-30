@@ -21,12 +21,20 @@ export const deletePlaylist = playlist => ({
   playlistId: playlist.id
 });
 
+export const addPlaylist = playlist => dispatch => (
+  APIUtil.addPlaylist(playlist).then(playlist => {
+    return (
+      dispatch(receivePlaylist(playlist))
+    )
+  })
+);
+
 export const fetchPlaylists = () => dispatch => (
-    APIUtil.fetchPlaylists().then(playlists => {
-        return (
-          dispatch(receivePlaylists(playlists))
-        )
-    })
+  APIUtil.fetchPlaylists().then(playlists => {
+    return (
+      dispatch(receivePlaylists(playlists))
+    )
+  })
 );
 
 export const fetchPlaylist = id => dispatch => (
