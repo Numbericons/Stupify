@@ -8,7 +8,6 @@ const PlaylistIndexItem = ({ Playlist, deletePlaylist }) => {
       <Link to={`/playlists/${Playlist.id}`}>
         {Playlist.name}
       </Link>&nbsp;
-      {Playlist.description}
       <button onClick={() => deletePlaylist(Playlist.id)}>Delete</button>
     </li>);
 };

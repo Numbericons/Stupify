@@ -5,14 +5,13 @@ import { addPlaylist } from '../../actions/playlist_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const playlist = { title: '', body: '' };
-  const formType = 'Add Playlist';
 
-  return { playlist, formType };
+  return { playlist };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    action: playlist => dispatch(addPlaylist(playlist)),
+    addPlaylist: playlist => dispatch(addPlaylist(playlist)),
   };
 };
 

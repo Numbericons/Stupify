@@ -20,6 +20,7 @@ class PlaylistIndex extends React.Component {
     
     return (
       <div>
+        <h5>Hello from Playlist index!</h5>
         <ul>
           {Playlists}
         </ul>
