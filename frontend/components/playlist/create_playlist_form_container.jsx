@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PlaylistForm from './playlist_form';
-import { createPlaylist } from '../../actions/playlist_actions';
+import { addPlaylist } from '../../actions/playlist_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  const Playlist = { title: '', body: '' };
-  const formType = 'Create Playlist';
+  const playlist = { title: '', body: '' };
+  const formType = 'Add Playlist';
 
-  return { Playlist, formType };
+  return { playlist, formType };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    action: Playlist => dispatch(createPlaylist(Playlist)),
+    action: playlist => dispatch(addPlaylist(playlist)),
   };
 };
 
