@@ -8,7 +8,6 @@ class PlaylistShow extends React.Component {
   }
 
 //   componentDidUpdate(prevProps) {
-//     debugger
 //     if (prevProps.playlist.id != this.props.match.params.playlistId) {
 //       this.props.fetchPlaylist(this.props.match.params.playlistId);
 //     }

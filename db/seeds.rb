@@ -16,7 +16,7 @@ Song.create(title: 'My Shot', album_id: 1, song_url: 'www.stupify/albums/1/mysho
 Song.create(title: 'Right Hand Man', album_id: 1, song_url: 'www.stupify/albums/1/righthandman', track_num: 8, duration: 180, plays: 1000000)
 Song.create(title: 'Satisfied', album_id: 1, song_url: 'www.stupify/albums/1/satisfied', track_num: 11, duration: 180, plays: 1000000)
 Song.create(title: 'Wait for It', album_id: 1, song_url: 'www.stupify/albums/1/waitforit', track_num: 13, duration: 180, plays: 1000000)
-Playlist.create(owner_id: 1, name: 'Hammy', description: 'Broadway show')
+Playlist.create(owner_id: 1, name: 'Hammy')
 Songlist.create(song_id: 1, playlist_id: 1)
 
 domains = [".com", '.co', '.edu', '.uk']
