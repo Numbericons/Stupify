@@ -7,6 +7,7 @@ class PlaylistIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchPlaylists();
+    this.props.fetchSongs();
   }
 
   render() {
@@ -33,12 +34,21 @@ class PlaylistIndex extends React.Component {
     
     return (
       <div>
-        <div id='pl-index-cnt'>
-          <h2 className='nav-head-text'>Playlists</h2>
-          <br/>
-          <ul>
-            {playlists}
-          </ul>
+        <div id='pl-index-big-cnt'>
+          <div className='pl-index-cnt'>
+            <h2 className='nav-head-text'>Playlists</h2>
+            <br/>
+            <ul>
+              {playlists}
+            </ul>
+          </div>
+          <div className='songs-cnt'>
+            <h2 className="h2-pl">All Songs</h2>
+            <br/>
+            <ul>
+                {dispSongs}
+            </ul>
+          </div>
         </div>
         <div id='create-pl-cnt'>
           <CreatePlaylistFormContainer />

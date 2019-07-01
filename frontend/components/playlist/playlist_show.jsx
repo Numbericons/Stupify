@@ -38,17 +38,17 @@ class PlaylistShow extends React.Component {
             <h3>Playlist: {playlist.name}</h3>
         </div>
             <Link to="/playlists">Back to all my Playlists!</Link>
-            <div className='div-pl-show-cont'>
+            <div className='div-pl-show-cnt'>
                 <div className='playlist-cont'>
                     <h2 className="h2-pl">Playlist Songs:</h2>
                 </div>
-                <div className='songs-cnt'>
+                {/* <div className='songs-cnt'>
                     <h2 className="h2-pl">All Songs</h2>
                     <br/>
                     <ul>
                         {dispSongs}
                     </ul>
-                </div>
+                </div> */}
             </div>
         </div>
         <div id='player-cnt'>

@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.div-pl-show-cont {
+.div-pl-show-cnt {
     display: flex;
     justify-content: space-around;
 }
@@ -35,4 +35,17 @@
 .pl-shw-cnt {
     background-color: rgba(0,0,0,.1);
     height: 1000px;
+}
+
+
+#pl-index-big-cnt {
+    display: flex;
+    justify-content: space-between;
+    height: 750px;
+    background-color: rgba(0,0,0,.3);
+}
+
+.pl-index-cnt {
+    display: flex;
+    flex-direction: column;
 }
