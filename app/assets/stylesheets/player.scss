@@ -4,9 +4,68 @@
     background-color: #282828;
     padding: 0px 16px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     bottom: 0;
     width: 100%
 }
+
+
+#player-heart-no {
+    height: 16px;
+    width: 20px;
+}
+
+#player-heart-yes {
+    height: 16px;
+    width: 20px;
+}
+
+#player-random {
+    height: 16px;
+    width: 20px;
+}
+#player-back {
+    height: 16px;
+    width: 20px;
+}
+#player-play {
+    height: 32px;
+    width: 32px;
+}
+#player-forward {
+    height: 16px;
+    width: 20px;
+}
+#player-repeat {
+    height: 16px;
+    width: 20px;
+}
+#player-volume-up {
+    height: 16px;
+    width: 20px;
+}
+
+#player-song-info {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+#player-control-ctn {
+    display: flex;
+    justify-content: space-around;
+    height: 55px;
+    align-items: center;
+}
+
+#player-volume-ctn {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+

@@ -49,10 +49,23 @@ class PlaylistShow extends React.Component {
                         {dispSongs}
                     </ul>
                 </div>
-            <i className="fas fa-play-circle">i tag</i>
             </div>
         </div>
         <div id='player-cnt'>
+          <div id='player-song-info'>
+            <img id="player-heart-no" src={window.heartno} />
+            {/* <img id="player-heart-yes" src={window.heartyes} /> */}
+          </div>
+          <div id='player-control-ctn'>
+            <img id="player-random" src={window.random} />
+            <img id="player-back" src={window.back} />
+            <img id="player-play" src={window.playbtn} />
+            <img id="player-forward" src={window.forward} />
+            <img id="player-repeat" src={window.repeat} />
+          </div>
+          <div id='player-volume-cnt'>
+            <img id="player-volume-up" src={window.volumeup} />
+          </div>
         </div>
       </div>
     );
