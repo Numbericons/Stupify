@@ -1,0 +1,12 @@
+#player-cnt {
+    height: 90px;
+    // background-color: rgba(0,0,0,.6);
+    background-color: #282828;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}

@@ -20,12 +20,16 @@ class PlaylistIndex extends React.Component {
     
     return (
       <div>
-        <h5>Hello from Playlist index!</h5>
-        <h5>put your feet up! Have a drink!</h5>
-        <ul>
-          {playlists}
-        </ul>
-        <CreatePlaylistFormContainer />
+        <div id='pl-index-cnt'>
+          <h2 className='nav-head-text'>Playlists</h2>
+          <br/>
+          <ul>
+            {playlists}
+          </ul>
+        </div>
+        <div id='create-pl-cnt'>
+          <CreatePlaylistFormContainer />
+        </div>
       </div>
     );
   }
