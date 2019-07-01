@@ -6,7 +6,10 @@ const playlistsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_PLAYLIST:
-            const newPlaylist = { [action.playlist.id]: action.playlist }
+            // const newPlaylist = { [action.playlist.id]: action.playlist }
+            const pl = Object.values(action.playlist)[0]
+            const newPlaylist = { [pl.id]: pl }
+            // const newPlaylist = { [Object.values(action.playlist)[0]]: Object.values(action.playlist) }
             return merge({}, state, newPlaylist);
         case RECEIVE_PLAYLISTS:
             return action.playlists;

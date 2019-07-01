@@ -1,6 +1,7 @@
 import React from 'react';
 import PlaylistIndexItem from './playlist_index_item';
 import CreatePlaylistFormContainer from './create_playlist_form_container';
+import SongShowItem from './song_show_item'
 
 class PlaylistIndex extends React.Component {
 
@@ -17,6 +18,18 @@ class PlaylistIndex extends React.Component {
           removePlaylist={this.props.removePlaylist} />
       );
     });
+    let dispSongs = <nav>Songs would go here!</nav>;
+    if (this.props.songs) {
+        dispSongs = this.props.songs.map((song,i) => {
+        return (
+            < SongShowItem song={song} key={i} />
+            // <li>
+                /* {song.title} */
+            // </li>
+        );
+        });
+    }
+    
     
     return (
       <div>

@@ -10,10 +10,15 @@ export const receivePlaylists = playlists => ({
   playlists
 });
 
-export const receivePlaylist = playlist => ({
+export const receivePlaylist = payload => ({
   type: RECEIVE_PLAYLIST,
-  playlist
+  playlist: payload.playlist,
+  songs: payload.songs
 });
+// export const receivePlaylist = playlist => ({
+//   type: RECEIVE_PLAYLIST,
+//   playlist
+// });
 
 export const deletePlaylist = id => ({
   type: REMOVE_PLAYLIST,
@@ -37,10 +42,18 @@ export const fetchPlaylists = () => dispatch => (
 );
 
 export const fetchPlaylist = id => dispatch => (
-    APIUtil.fetchPlaylist(id).then(playlist => (
-        dispatch(receivePlaylist(playlist))
-    ))
+    APIUtil.fetchPlaylist(id).then(payload => {
+        return (
+          dispatch(receivePlaylist(payload))
+        )
+    })
 );
+
+// export const fetchPlaylist = id => dispatch => (
+//     APIUtil.fetchPlaylist(id).then(playlist => (
+//         dispatch(receivePlaylist(playlist))
+//     ))
+// );
 
 export const removePlaylist = id => dispatch => {
     return (
