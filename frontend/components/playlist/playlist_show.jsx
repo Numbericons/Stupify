@@ -49,10 +49,10 @@ class PlaylistShow extends React.Component {
                         {dispSongs}
                     </ul>
                 </div>
+            <i className="fas fa-play-circle">i tag</i>
             </div>
         </div>
         <div id='player-cnt'>
-            <i class="fas fa-play-circle"></i>
         </div>
       </div>
     );
