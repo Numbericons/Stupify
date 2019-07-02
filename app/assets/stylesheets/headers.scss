@@ -70,4 +70,23 @@ h5 {
 #pl-title {
     // flex-direction: flex-start;
     color: white;
+    font-size: 28px;
+}
+
+#song-list-header {
+    // display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+//   -webkit-box-orient: horizontal;
+//   -webkit-box-direction: normal;
+//   -ms-flex-direction: row;
+  flex-direction: row;
+//   -webkit-box-pack: start;
+//   -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 0 0 20px;
+  max-width: 100%;
+  padding-bottom: 20px;
+  height: 190px;
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
 }

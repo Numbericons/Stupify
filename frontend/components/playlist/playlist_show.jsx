@@ -38,7 +38,6 @@ class PlaylistShow extends React.Component {
               <h2 className='nav-head-text-player'>Stupify</h2>
             </div>
               <br/>
-                <h2 id='pl-title'>Playlist: {playlist.name}</h2>
                 <br/>
                 <div className='side-icon-link-cnt'>
                   <img className="pl-side-sm-icon" src={window.home} />
@@ -60,7 +59,7 @@ class PlaylistShow extends React.Component {
             </div>
             <div className='playlist-cnt'>
               <div className='songs-cnt'>
-                  <h2>Playlist Songs:</h2>
+                  <h2 id='pl-title'>{playlist.name}</h2>
                   <ul>
                       {dispSongs}
                   </ul>

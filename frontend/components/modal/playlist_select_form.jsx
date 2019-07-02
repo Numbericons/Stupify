@@ -17,7 +17,7 @@ class PlaylistSelectForm extends React.Component {
   }
 
   render() {
-    const playlists = Object.values(this.props.playlists).map(playlist => {
+    const playlists = Object.values(this.props.playlists).map((playlist, i) => {
     return (
         <div onClick={(e) => this.handleSubmit(e, playlist.id)}>
             {playlist.name}
