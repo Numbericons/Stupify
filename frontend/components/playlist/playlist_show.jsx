@@ -5,7 +5,6 @@ import SongShowItem from './song_show_item'
 class PlaylistShow extends React.Component {
   componentDidMount() {
     this.props.fetchPlaylist(this.props.match.params.playlistId);
-    this.props.fetchSongs();
   }
 
 //   componentDidUpdate(prevProps) {
@@ -23,48 +22,51 @@ class PlaylistShow extends React.Component {
     if (this.props.songs) {
         dispSongs = this.props.songs.map((song,i) => {
         return (
-            < SongShowItem song={song} key={i} />
+            < SongShowItem playlistId={this.props.playlist.id} song={song} key={i} removeSonglist={this.props.removeSonglist} />
             // <li>
-                /* {song.title} */
+              // {song.title}
             // </li>
         );
         });
     }
-    
     return (
       <div>
-        <div className='pl-shw-cnt'>
-             <div className='pl-title-cont'>
-            <h3>Playlist: {playlist.name}</h3>
-        </div>
-            <Link to="/playlists">Back to all my Playlists!</Link>
-            <div className='div-pl-show-cnt'>
-                <div className='playlist-cont'>
-                    <h2 className="h2-pl">Playlist Songs:</h2>
-                </div>
-                {/* <div className='songs-cnt'>
-                    <h2 className="h2-pl">All Songs</h2>
-                    <br/>
-                    <ul>
-                        {dispSongs}
-                    </ul>
-                </div> */}
+        <div id='pl-show-big-cnt'>
+          <div className='sidebar-cnt'>
+                <Link to="/playlists">Back to all my Playlists!</Link>
+                <h2 id='pl-title'>Playlist: {playlist.name}</h2>
+                <br/>
+          </div>
+          <div className='pl-album-cnt'></div>
+          <div className='pl-show-cnt'>
+            <div className='pl-show-title-cnt'>
+                {/* <div className='pl-title-cont'> */}
             </div>
-        </div>
-        <div id='player-cnt'>
-          <div id='player-song-info'>
-            <img id="player-heart-no" src={window.heartno} />
-            {/* <img id="player-heart-yes" src={window.heartyes} /> */}
+            <div className='playlist-cnt'>
+              <div className='songs-cnt'>
+                  <h2>Playlist Songs:</h2>
+                  <ul>
+                      {dispSongs}
+                  </ul>
+              </div>
+            </div>
+           {/* </div> */}
           </div>
-          <div id='player-control-ctn'>
-            <img id="player-random" src={window.random} />
-            <img id="player-back" src={window.back} />
-            <img id="player-play" src={window.playbtn} />
-            <img id="player-forward" src={window.forward} />
-            <img id="player-repeat" src={window.repeat} />
-          </div>
-          <div id='player-volume-cnt'>
-            <img id="player-volume-up" src={window.volumeup} />
+          <div id='player-cnt'>
+            <div id='player-song-info'>
+              <img id="player-heart-no" src={window.heartno} />
+              {/* <img id="player-heart-yes" src={window.heartyes} /> */}
+            </div>
+            <div id='player-control-ctn'>
+              <img id="player-random" src={window.random} />
+              <img id="player-back" src={window.back} />
+              <img id="player-play" src={window.playbtn} />
+              <img id="player-forward" src={window.forward} />
+              <img id="player-repeat" src={window.repeat} />
+            </div>
+            <div id='player-volume-cnt'>
+              <img id="player-volume-up" src={window.volumeup} />
+            </div>
           </div>
         </div>
       </div>
