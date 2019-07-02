@@ -27,6 +27,13 @@
     transform: translate(0px,3px);
 }
 
+.nav-head-text-player {
+    margin-top: 25px;
+    color: white;
+    transform: translate(0px,-10px);
+    align-self: baseline;
+}
+
 .nav-logo {
     width: 40px;
     height: 40px;
@@ -63,10 +70,38 @@
     width: 276px;
 }
 
+.logo-box-pl {
+    display: flex;
+    justify-content: center;   
+    height: 63px; 
+    padding-top:25px;
+    // width: 276px;
+}
+
 .sidebar-cnt {
     width: 230px;
     background-color: rgba(0,0,0,.9);
     display: flex;
     flex-direction: column;
+}
+
+.pl-side-sm-icon {
+    height: 24px;
+    width: 24px;
+}
+
+#pl-side-home-link {
+    color: white;
+    text-decoration: none;
+}
+
+#pl-side-search-link {
+    color: white;
+    text-decoration: none;
+}
+
+#pl-side-library-link {
+    color: white;
+    text-decoration: none;
 }
 

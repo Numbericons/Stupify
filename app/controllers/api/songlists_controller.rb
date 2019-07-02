@@ -13,12 +13,19 @@ class Api::SonglistsController < ApplicationController
     end
     
     def destroy
-        @songlist = Songlist.find_by(playlist_id: params[:id])
-        if @songlist && @songlist.song_id.to_s == params['song_id']
-            Songlist.destroy(@songlist.id)
-            render json: @songlist.playlist_id
+        songlist_id = Songlist.find_by_credentials(params[:id], params['song_id'])
+        if songlist_id
+            Songlist.destroy(songlist_id)
+            render json: params[:id]
         else
             render json: ['failure!']
         end
+        # @songlist = Songlist.find_by(playlist_id: params[:id])
+        # if @songlist && @songlist.song_id.to_s == params['song_id']
+        #     Songlist.destroy(@songlist.id)
+        #     render json: @songlist.playlist_id
+        # else
+        #     render json: ['failure!']
+        # end
     end
 end

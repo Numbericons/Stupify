@@ -33,11 +33,27 @@ class PlaylistShow extends React.Component {
       <div>
         <div id='pl-show-big-cnt'>
           <div className='sidebar-cnt'>
-                <Link to="/playlists">Back to all my Playlists!</Link>
+            <div className='logo-box-pl'>
+              <img className='nav-logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"/>
+              <h2 className='nav-head-text-player'>Stupify</h2>
+            </div>
+              <br/>
                 <h2 id='pl-title'>Playlist: {playlist.name}</h2>
                 <br/>
+                <div className='side-icon-link-cnt'>
+                  <img className="pl-side-sm-icon" src={window.home} />
+                  <Link id='pl-side-home-link' to="/playlists">Home</Link>
+                </div>
+                <div className='side-icon-link-cnt'>
+                  <img className="pl-side-sm-icon" src={window.search} />
+                  <Link id='pl-side-search-link' to="#">Search</Link>
+                </div>
+                <div className='side-icon-link-cnt'>
+                  <img className="pl-side-sm-icon" src={window.library} />
+                  <Link id='pl-side-library-link' to="/#">Your Library</Link>
+                </div>
           </div>
-          <div className='pl-album-cnt'></div>
+          {/* <div className='pl-album-cnt'></div> */}
           <div className='pl-show-cnt'>
             <div className='pl-show-title-cnt'>
                 {/* <div className='pl-title-cont'> */}

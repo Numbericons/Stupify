@@ -15,7 +15,9 @@ class Songlist < ApplicationRecord
     belongs_to :song
     belongs_to :playlist
 
-    # def exists?(playlist_id, song_id)
-    #     Songlist.find_by(playlist_id: playlist_id) && Songlist.find_by(song_id: song_id)
-    # end
+    def self.find_by_credentials(pl_id, s_id)
+        songlists = Songlist.where(playlist_id: pl_id)
+        songlist = songlists.where(song_id: s_id)[0]
+        songlist ? songlist.id : nil
+    end
 end

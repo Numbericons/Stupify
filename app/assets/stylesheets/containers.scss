@@ -7,7 +7,8 @@
 .pl-show-cnt {
     display: flex;
     justify-content: center;
-    width: 2000px;
+    width: 100%;
+    // width: 2000px;
     height: 100%;
     background: brown
 }
@@ -15,6 +16,7 @@
 .playlist-cnt {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .songs-cnt {
@@ -45,7 +47,7 @@
 #pl-index-big-cnt {
     display: flex;
     justify-content: space-between;
-    height: 750px;
+    height: 550px;
     background-color: rgba(0,0,0,.3);
 }
 
@@ -66,4 +68,14 @@
     padding-left: 10px;
     padding-right: 10px;
     background-color: brown
+}
+
+.side-icon-link-cnt {
+    display: flex;
+    border: 0;
+    width: 100%;
+    padding: 0 24px;
+    height: 40px;
+    justify-content: space-around;
+    // flex-direction: column;
 }

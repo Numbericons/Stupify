@@ -1,7 +1,7 @@
 import React from 'react';
 import PlaylistIndexItem from './playlist_index_item';
 import CreatePlaylistFormContainer from './create_playlist_form_container';
-import SongShowItem from './song_show_item'
+import SongShowAddItem from './song_show_add_item'
 
 class PlaylistIndex extends React.Component {
 
@@ -23,7 +23,7 @@ class PlaylistIndex extends React.Component {
     if (this.props.songs) {
         dispSongs = this.props.songs.map((song,i) => {
         return (
-            < SongShowItem song={song} key={i} />
+            < SongShowAddItem song={song} key={i} addSonglist={this.props.addSonglist} />
             // <li>
                 /* {song.title} */
             // </li>
