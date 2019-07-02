@@ -18,6 +18,6 @@ class Songlist < ApplicationRecord
     def self.find_by_credentials(pl_id, s_id)
         songlists = Songlist.where(playlist_id: pl_id)
         songlist = songlists.where(song_id: s_id)[0]
-        songlist ? songlist.id : nil
+        songlist ? songlist : nil
     end
 end

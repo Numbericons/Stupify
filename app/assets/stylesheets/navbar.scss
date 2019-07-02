@@ -75,7 +75,7 @@
     justify-content: center;   
     height: 63px; 
     padding-top:25px;
-    // width: 276px;
+    width: 100%;
 }
 
 .sidebar-cnt {
@@ -83,6 +83,7 @@
     background-color: rgba(0,0,0,.9);
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 .pl-side-sm-icon {
@@ -93,15 +94,18 @@
 #pl-side-home-link {
     color: white;
     text-decoration: none;
+    font-family: 'Cabin', sans-serif;
 }
 
 #pl-side-search-link {
     color: white;
     text-decoration: none;
+    font-family: 'Cabin', sans-serif;
 }
 
 #pl-side-library-link {
     color: white;
     text-decoration: none;
+    font-family: 'Cabin', sans-serif;
 }
 

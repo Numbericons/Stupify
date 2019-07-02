@@ -2,6 +2,7 @@ import React from 'react';
 import PlaylistIndexItem from './playlist_index_item';
 import CreatePlaylistFormContainer from './create_playlist_form_container';
 import SongShowAddItem from './song_show_add_item'
+import Modal from '../modal/modal';
 
 class PlaylistIndex extends React.Component {
 
@@ -23,10 +24,8 @@ class PlaylistIndex extends React.Component {
     if (this.props.songs) {
         dispSongs = this.props.songs.map((song,i) => {
         return (
-            < SongShowAddItem song={song} key={i} addSonglist={this.props.addSonglist} />
-            // <li>
-                /* {song.title} */
-            // </li>
+            < SongShowAddItem song={song} key={i} addSonglist={this.props.addSonglist} openModal={this.props.openModal} />
+            // <li> {song.title}</li>
         );
         });
     }
@@ -34,6 +33,7 @@ class PlaylistIndex extends React.Component {
     
     return (
       <div>
+        <Modal/>
         <div id='pl-index-big-cnt'>
           <div className='pl-index-cnt'>
             <h2 className='nav-head-text'>Playlists</h2>
