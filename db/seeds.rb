@@ -8,7 +8,7 @@
 # email = potterArr.map{|capStr| capStr.split("").reject{|char| char == " " }.join("").downcase}
 
 User.create(username: 'Demo User', email: 'demo', password: '123456')
-Artist.create(name: 'Lin Manuel Miranda', mon_listeners: 1000000, image_url: 'www.puertorico.com')
+Artist.create(name: 'Lin-Manuel Miranda', mon_listeners: 1000000, image_url: 'www.puertorico.com')
 Album.create(name: 'Hamilton', artist_id: 1, year: 2015, cover_art_url: 'www.hamilton.com')
 Song.create(title: 'Alexander Hamilton', album_id: 1, song_url: 'www.stupify/albums/1/alexanderhamilton', track_num: 1, duration: 180, plays: 1000000)
 Song.create(title: 'Aaron Burr, Sir', album_id: 1, song_url: 'www.stupify/albums/1/aaronburrsir', track_num: 2, duration: 180, plays: 1000000)

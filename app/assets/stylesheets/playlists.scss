@@ -1,0 +1,9 @@
+.note-toggle {
+    height: 24px;
+    width: 24px;
+    background: url('music-solid.svg') no-repeat;
+    display: inline-block;
+}
+.note-toggle:hover {
+    background: url('play-solid.svg') no-repeat;
+}

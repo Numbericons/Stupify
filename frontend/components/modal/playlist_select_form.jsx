@@ -10,7 +10,6 @@ class PlaylistSelectForm extends React.Component {
 
 
   handleSubmit(e, playlistId) {
-    debugger
     e.preventDefault();
     let songId = this.props.songId;
     this.props.processForm(playlistId, songId).then(this.props.closeModal);
@@ -29,14 +28,13 @@ class PlaylistSelectForm extends React.Component {
     return (
       <div className="pl-select-cnt">
         <form onSubmit={this.handleSubmit} className="pl-select-form-box">
-          Add to playlist
+          <div onClick={this.props.closeModal} className="close-x" id='pl-add'>X</div>
+          <h1 id='pl-add'>Add to playlist</h1>
           <br/>
-          <div onClick={this.props.closeModal} className="close-x">X</div>
           <div className="pl-select-form">
             <br/>
             {playlists}
             <br/>
-            <input className="pl_select-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
       </div>

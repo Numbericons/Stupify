@@ -23,9 +23,6 @@ class PlaylistShow extends React.Component {
         dispSongs = this.props.songs.map((song,i) => {
         return (
             < SongShowItem playlistId={this.props.playlist.id} song={song} key={i} removeSonglist={this.props.removeSonglist} />
-            // <li>
-              // {song.title}
-            // </li>
         );
         });
     }
@@ -51,15 +48,30 @@ class PlaylistShow extends React.Component {
                   <img className="pl-side-sm-icon" src={window.library} />
                   <Link id='pl-side-library-link' to="/#">Your Library</Link>
                 </div>
+                <div id='side-recently-played'></div>
+                <div className="or-side-cont">
+                  <div className="or-side-line-extd"></div>
+                </div>
+                <div id='curr-user-cnt'>
+                  <img className="pl-side-sm-icon" src={window.user} />
+                  <p id='curr-user-text'>{this.props.currUser} </p>
+                </div>
           </div>
           {/* <div className='pl-album-cnt'></div> */}
-          <div className='pl-show-cnt'>
-            <div className='pl-show-title-cnt'>
-                {/* <div className='pl-title-cont'> */}
+          <div className='song-list-header'>
+            <div className='pl-info-pane-cnt'>
+              <div id='pl-info-cnt'>
+                <img id='pl-show-art' src={window.hamilton} />
+                <div id='pl-title-cnt'>
+                  <h2 id='pl-title'>{playlist.name}</h2>
+                </div>
+                <button className='play-btn'>PLAY</button>
+                {/* <div>Play</div> */}
+                {/* <div>Info</div> */}
+              </div>
             </div>
             <div className='playlist-cnt'>
               <div className='songs-cnt'>
-                  <h2 id='pl-title'>{playlist.name}</h2>
                   <ul>
                       {dispSongs}
                   </ul>
@@ -78,9 +90,17 @@ class PlaylistShow extends React.Component {
               <img id="player-play" src={window.playbtn} />
               <img id="player-forward" src={window.forward} />
               <img id="player-repeat" src={window.repeat} />
+              {/* <div id='song-progress-cnt'> */}
+                <div className="song-progress-cont">
+                    <div className="song-progress"></div>
+                </div>
+              {/* </div> */}
             </div>
-            <div id='player-volume-cnt'>
+            <div id='player-volume-ctn'>
               <img id="player-volume-up" src={window.volumeup} />
+              <div className="or-volume-cont">
+                  <div className="or-side-line-extd"></div>
+              </div>
             </div>
           </div>
         </div>

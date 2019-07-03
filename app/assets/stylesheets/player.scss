@@ -1,7 +1,9 @@
 #player-cnt {
     height: 90px;
-    // background-color: rgba(0,0,0,.6);
-    background-color: #282828;
+    // background-color: rgba(0,230,0,1);
+    // background-color: rgba(0,102,0,1);
+    background: linear-gradient(rgba(0, 253, 0, 1) 0, rgba(0, 102, 0, 1) 87%);
+    // background-color: #282828;
     padding: 0px 16px;
     display: flex;
     // justify-content: center;
@@ -57,8 +59,12 @@
 #player-control-ctn {
     display: flex;
     justify-content: space-around;
-    height: 55px;
+    height: 65px;
     align-items: center;
+    width: 220px;
+    align-self: flex-end;
+    transform: translate(18px, -2px);
+    flex-wrap: wrap;
 }
 
 #player-volume-ctn {
@@ -66,6 +72,21 @@
     justify-content: space-around;
     height: 100%;
     align-items: center;
+    transform: translate(150px, 0px)
+}
+
+.song-progress-cont {
+    width: 250px;
+    height: 50px;
+    transform: translate(0px, -30px);
+    // display: flex;
+}
+
+.song-progress {
+    width:100%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dfe0e6;
 }
 
 
