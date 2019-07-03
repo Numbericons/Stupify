@@ -152,12 +152,17 @@
     // background: linear-gradient(#rgb(38, 38, 38) 0, #006600 87%);
 }
 
-#song-title {
+#song-info {
     width: 450px;
     margin-left: -120px;
     display: flex;
-    align-items: center;
     font-size: 18px;
     font-weight: 1000;
     font-family: 'Cabin', sans-serif;
+    flex-direction: column;
+}
+
+#song-duration-cont {
+    display: flex;
+    justify-content: space-between;
 }

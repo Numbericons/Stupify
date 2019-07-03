@@ -3,7 +3,6 @@ class Api::SonglistsController < ApplicationController
         @songlist = Songlist.new
         @songlist.song_id = params[:song_id]
         @songlist.playlist_id = params[:playlist_id]
-        # debugger
         if @songlist.save
             render json: @songlist.playlist_id
             # render "api/songs/show"

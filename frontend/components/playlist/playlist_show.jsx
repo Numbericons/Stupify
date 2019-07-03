@@ -68,6 +68,10 @@ class PlaylistShow extends React.Component {
                 <button className='play-btn'>PLAY</button>
                 {/* <div>Play</div> */}
                 {/* <div>Info</div> */}
+                <br/>
+                <div id='song-grey-font'>
+                  {this.props.songs.length} SONGS
+                </div>
               </div>
             </div>
             <div className='playlist-cnt'>

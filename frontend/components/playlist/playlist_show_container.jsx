@@ -7,7 +7,6 @@ import { removeSonglist } from '../../actions/songlist_actions.js';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return ({
     playlist: state.entities.playlists[ownProps.match.params.playlistId],
     songs: Object.values(state.entities.songs),
