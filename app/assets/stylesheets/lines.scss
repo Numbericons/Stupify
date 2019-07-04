@@ -11,11 +11,11 @@
 .or-side-cont {
     width: 140px;
     // margin-right: 25px;
-    margin: 0px 25px 0px 25px;
+    // margin: 0px 25px 0px 25px;
+    margin: 0px 20px 0px 20px;
     height: 20px;
     display: flex;
-    // transform: translate(-30 px, 0px);
-    transform: translate(0px, -30px);
+    // transform: translate(0px, -30px);
 }
 
 
@@ -52,4 +52,12 @@
     margin-top: 40px;
     margin-bottom: 25px;
     border-bottom: 1px solid #dfe0e6;
+}
+
+.curr-side-line-extd {
+    // width:100%;
+    // width: 180px;
+    // margin-top: 40px;
+    // margin-bottom: 25px;
+    // border-bottom: .5px solid #dfe0e6;
 }

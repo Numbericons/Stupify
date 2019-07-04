@@ -18,8 +18,10 @@ class PlaylistSelectForm extends React.Component {
   render() {
     const playlists = Object.values(this.props.playlists).map((playlist, i) => {
     return (
-        <div onClick={(e) => this.handleSubmit(e, playlist.id)}>
-            {playlist.name}
+        <div onClick={(e) => this.handleSubmit(e, playlist.id)} key={i}>
+            <div id='pl-select-show-cnt'>
+              {playlist.name}
+            </div>
             {/* <img src=""/>  cover album */}
         </div>
         // <input type="checkbox" name={playlist.name} value={playlist.name}/>
@@ -28,8 +30,16 @@ class PlaylistSelectForm extends React.Component {
     return (
       <div className="pl-select-cnt">
         <form onSubmit={this.handleSubmit} className="pl-select-form-box">
-          <div onClick={this.props.closeModal} className="close-x" id='pl-add'>X</div>
-          <h1 id='pl-add'>Add to playlist</h1>
+          <div id='close-x-cnt'>
+            {/* <div onClick={this.props.closeModal} className="close-x" id='pl-add'>X</div> */}
+            <div onClick={this.props.closeModal} className="close-x" id='pl-add'>
+              <img className="pl-select-close" src={window.circlesolid}/>
+              {/* <img className="pl-side-sm-icon" src={window.circleregular}/> */}
+            </div>
+          </div>
+          <div id='pl-add-cnt'>
+            <h1 id='pl-add'>Add to playlist</h1>
+          </div>
           <br/>
           <div className="pl-select-form">
             <br/>

@@ -27,7 +27,7 @@ export default class Clock extends React.Component {
     let minutes = Math.floor(this.state.time / 60)
     let seconds = this.state.time % 60
 
-    minutes = (minutes < 10) ? `0${minutes}` : minutes;
+    // minutes = (minutes < 10) ? `${minutes}` : minutes;
     seconds = (seconds < 10) ? `0${seconds}` : seconds;
     return (
       <div>

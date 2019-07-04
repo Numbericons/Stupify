@@ -55,6 +55,7 @@
     justify-content: space-between;
     height: 550px;
     background-color: rgba(0,0,0,.3);
+    flex-wrap: wrap;
 }
 
 .pl-index-cnt {
@@ -86,6 +87,9 @@
     align-items: center;
 }
 
+.side-icon-link-cnt {
+    cursor: pointer;
+}
 .song-list-header {
 //   display: -webkit-box;
 //   display: -ms-flexbox;
@@ -126,9 +130,13 @@
 }
 
 #curr-user-cnt {
-    width: 89%;
+    width: 100%;
     display: flex;
     align-items: center;
+    transform: translate(-24px, 0px);
+    margin-left: 4px;
+    border-top: .1px solid #dfe0e6;
+    padding-top: 8px;
 }
 
 #song-row-cnt {
@@ -166,4 +174,24 @@
 #song-duration-cont {
     display: flex;
     justify-content: space-between;
+}
+
+#logout-text-cnt {
+    display: flex;
+    margin-left: 6px;
+}
+
+#close-x-cnt {
+    display: flex;
+    justify-content: center;
+}
+
+#pl-add-cnt {
+    display: flex;
+    justify-content: center;
+}
+
+#pl-select-show-cnt {
+    color: white;
+    font-size: 27px;
 }

@@ -49,6 +49,7 @@ class PlaylistIndex extends React.Component {
                 {dispSongs}
             </ul>
           </div>
+          <div className='pl-idx-background'></div>
         </div>
         <div id='create-pl-cnt'>
           <CreatePlaylistFormContainer />

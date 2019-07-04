@@ -8,8 +8,7 @@
     <%= javascript_include_tag 'application' %>
     <!-- <link rel="icon" href="/logo.jpg"> -->
     <link rel="icon" href="https://static1.squarespace.com/static/5ab3cf1d9d5abbcd19915a76/t/5c7bf9306e9a7f0c98f072a7/1551628597224/spotify-logo.png">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     
     <script type="text/javascript">
@@ -28,10 +27,34 @@
       window.music = "<%= image_url('music-solid.svg') %>"
       window.ellipsis = "<%= image_url('ellipsis-h-solid.svg') %>"
       window.hamilton = "<%= image_url('hamilton2.jpeg') %>"
+      window.circlesolid = "<%= image_url('times-circle-solid.svg') %>"
+      window.circleregular = "<%= image_url('times-circle-regular.svg') %>"
     </script>
   </head>
 
   <body>
+    
     <%= yield %>
+      <!-- <audio id="myAudio" controls> -->
+        <!-- <source src="/app/assets/songs/piano.wav" type="audio/wav"> -->
+        <!-- <source src="/assets/songs/piano.wav" type="audio/wav"> -->
+        <!-- <source href="/app/assets/songs/piano.wav" type="audio/wav"> -->
+        <!-- <source url="app/assets/songs/piano.wav" type="audio/wav"> -->
+        <!-- <source src="http://www.hochmuth.com/mp3/Vivaldi_Sonata_eminor_.mp3" type="audio/wav"> -->
+        <!-- <source src="/songs/piano.wav" type="audio/wav"> -->
+      <!-- </audio> -->
+      
+      <!-- <p>Click the button to get the duration of the audio, in seconds.</p> -->
+      
+      <!-- <button onclick="myFunction()">Try it</button> -->
+      
+      <!-- <p id="demo"></p>
+      
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myAudio").duration;
+          document.getElementById("demo").innerHTML = x;
+        }
+      </script> -->
   </body>
 </html>

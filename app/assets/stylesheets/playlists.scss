@@ -3,7 +3,19 @@
     width: 24px;
     background: url('music-solid.svg') no-repeat;
     display: inline-block;
+    margin-left: 8px;
+    // filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+    // filter: invert(25%) sepia(96%) saturate(5128%) hue-rotate(73deg) brightness(95%) contrast(101%);
+    // filter: invert(100%) sepia(2%) saturate(1298%) hue-rotate(288deg) brightness(116%) contrast(80%);
+    // filter: invert(100%) sepia(0%) saturate(7371%) hue-rotate(290deg) brightness(91%) contrast(85%);
+    filter: invert(97%) sepia(9%) saturate(0%) hue-rotate(191deg) brightness(83%) contrast(93%);
 }
 .note-toggle:hover {
     background: url('play-solid.svg') no-repeat;
+}
+
+.pl-idx-background {
+    height: 380px; 
+    width: 100%;
+    background-image: url('https://images-na.ssl-images-amazon.com/images/I/51t%2Bo%2BZtRxL._SX425_.jpg')
 }

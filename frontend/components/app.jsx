@@ -21,11 +21,11 @@ const App = () => {
       </div>
     </header> */}
     <Switch>
-      <Route exact path="/" component={GreetingContainer}/>
+      <AuthRoute exact path="/" component={GreetingContainer}/>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <Route exact path="/playlists" component={PlaylistIndexContainer} />
-      <Route path="/playlists/:playlistId" component={PlaylistShowContainer}/>
+      <ProtectedRoute exact path="/playlists" component={PlaylistIndexContainer} />
+      <ProtectedRoute path="/playlists/:playlistId" component={PlaylistShowContainer}/>
     </Switch>
     </div>
   )
