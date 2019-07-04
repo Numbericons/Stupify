@@ -154,12 +154,13 @@
 
 #song-info {
     width: 450px;
-    margin-left: -120px;
+    margin-left: -90px;
     display: flex;
     font-size: 18px;
     font-weight: 1000;
     font-family: 'Cabin', sans-serif;
     flex-direction: column;
+    padding-left: 5px;
 }
 
 #song-duration-cont {

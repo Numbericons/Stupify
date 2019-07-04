@@ -49,12 +49,14 @@ class PlaylistShow extends React.Component {
                   <Link id='pl-side-library-link' to="/#">Your Library</Link>
                 </div>
                 <div id='side-recently-played'></div>
+                <p id='logout-text' onClick={this.props.logout}>Log Out</p>
                 <div className="or-side-cont">
                   <div className="or-side-line-extd"></div>
                 </div>
                 <div id='curr-user-cnt'>
                   <img className="pl-side-sm-icon" src={window.user} />
                   <p id='curr-user-text'>{this.props.currUser} </p>
+                  {/* <button className="logout-btn" onClick={this.props.logout}>Log Out</button> */}
                 </div>
           </div>
           {/* <div className='pl-album-cnt'></div> */}
@@ -66,8 +68,6 @@ class PlaylistShow extends React.Component {
                   <h2 id='pl-title'>{playlist.name}</h2>
                 </div>
                 <button className='play-btn'>PLAY</button>
-                {/* <div>Play</div> */}
-                {/* <div>Info</div> */}
                 <br/>
                 <div id='song-grey-font'>
                   {this.props.songs.length} SONGS
@@ -81,7 +81,6 @@ class PlaylistShow extends React.Component {
                   </ul>
               </div>
             </div>
-           {/* </div> */}
           </div>
           <div id='player-cnt'>
             <div id='player-song-info'>
@@ -96,9 +95,10 @@ class PlaylistShow extends React.Component {
               <img id="player-repeat" src={window.repeat} />
               {/* <div id='song-progress-cnt'> */}
                 <div className="song-progress-cont">
+                    {/* <div>00:00</div> */}
                     <div className="song-progress"></div>
+                    {/* <div>03:16</div> */}
                 </div>
-              {/* </div> */}
             </div>
             <div id='player-volume-ctn'>
               <img id="player-volume-up" src={window.volumeup} />
