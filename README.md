@@ -2,7 +2,9 @@
 
 [Stupify Live](https://stupify.herokuapp.com/#/)
 
-Greetings from the good, honest and decent folks at Stupify. We aim to stupefy our audience with the simplicity and elegance of our presentation, like a baby seeing a sunset for the first time. 
+Greetings from the good, honest and decent folks at Stupify. We aim to stupefy our audience with the simplicity and elegance of our presentation, like a newborn babe seeing a sunset for the first time.
+
+![hamilton-ss](https://user-images.githubusercontent.com/16912968/60735158-1eb0c700-9f07-11e9-9de2-d6953625f051.png)
 
 Stupify is a clone of Spotify conceived in two weeks. The site mimicks the appearence of Spotify and allows users to create, view and edit playlists of songs from the database with associated album and artist information.
 
@@ -12,32 +14,7 @@ Playlists are the central feature of this website.  To reduce redundancy, the sa
 
 When viewing a playlist, the Songlist associations are used to select a random song from the playlist and then fetch the associated album and its art to display to the user. Here is the chained method used to show how the JSON attribute of album art is set:
 
-json.album_art playlist.songs.sample.song.album.cover_art_url
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`json.album_art playlist.songs.sample.song.album.cover_art_url`
 
 ### Site Features:
 
