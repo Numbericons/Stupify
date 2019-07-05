@@ -18,6 +18,7 @@ class PlaylistIndex extends React.Component {
 // //     }
 //   }
 
+
   render() {
     const playlists = this.props.playlists.map(playlist => {
       return (

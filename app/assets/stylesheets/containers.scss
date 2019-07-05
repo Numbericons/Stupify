@@ -25,6 +25,7 @@
 .songs-cnt {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 #pl-index-cnt {
@@ -40,7 +41,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
     margin-top: 140px;
 }
 
@@ -57,10 +57,10 @@
 
 #pl-index-big-cnt {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 550px;
-    background-color: rgba(0,0,0,.3);
     flex-wrap: wrap;
+    background-color: tan;
 }
 
 .pl-index-cnt {
@@ -194,6 +194,7 @@
 #pl-add-cnt {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 #album-art-cnt {
@@ -202,7 +203,7 @@
     width: 215px;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0px 20px 40px 20px;
 }
 
 #album-art {

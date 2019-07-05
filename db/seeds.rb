@@ -36,7 +36,7 @@ Song.create(title: "Talking To Myself", album_id: 4, song_url: 'www.stupify/albu
 Playlist.create(owner_id: 1, name: 'Hammy')
 Songlist.create(song_id: 1, playlist_id: 1)
 
-domains = [".com", '.co', '.edu', '.uk']
+domains = ['.com', '.co', '.edu', '.uk', '.wiz']
 symbols = "!@#$%^&*()-+=[];:,<>/?'|\`~ "
 
 50.times do

@@ -26,6 +26,9 @@ class PlaylistShow extends React.Component {
         );
         });
     }
+    if (!playlist.album_art) {
+      playlist.album_art = window.albummissing;
+    }
     return (
       <div>
         <div id='pl-show-big-cnt'>

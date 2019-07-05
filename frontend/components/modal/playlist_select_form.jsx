@@ -17,6 +17,10 @@ class PlaylistSelectForm extends React.Component {
 
   render() {
     const playlists = Object.values(this.props.playlists).map((playlist, i) => {
+    if (!playlist.count) {
+      playlist.count = 0;
+      playlist.album_art = window.albummissing;
+    }
     return (
         <div onClick={(e) => this.handleSubmit(e, playlist.id)} key={i}>
           <div id='album-art-cnt'>
