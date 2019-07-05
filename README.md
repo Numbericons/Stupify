@@ -10,11 +10,16 @@ Stupify is a clone of Spotify conceived in two weeks. The site mimicks the appea
 
 The backend of Stupify was created using Ruby on Rails along with Postgresql. Data is retrieved to the frontend using AJAX calls. Javascript libraries React.js and Redux are utilized to create the html for the pages of the site and a final layer of CSS is applied to complete the presentation.
 
-Playlists are the central feature of this website.  To reduce redundancy, the same song can be added to multiple playlists and a playlist can have many songs. After all, it's not a traditional library where one user checks out a song for their playlist making it unavailable to the rest of the population. To accomplish this, an entry in a join table of Songlists - foreign keys to songs and playlists - is created to make the association.
+Playlists are the central feature of this website.  To reduce redundancy, the same song can be added to multiple playlists and a playlist can have many songs. After all, it is not a traditional library where one user checks out a song for their playlist making it unavailable to the rest of the population. To accomplish this, an entry in a join table of Songlists - foreign keys to songs and playlists - is created to make the association.
 
-When viewing a playlist, the Songlist associations are used to select a random song from the playlist and then fetch the associated album and its art to display to the user. Here is the chained method used to show how the JSON attribute of album art is set:
+When viewing a playlist, the Songlist associations are used to select a random song from the playlist and then fetch the associated album and its art to display to the user. Below is the snippet showing how the JSON attribute of album art is set:
 
-`json.album_art playlist.songs.sample.song.album.cover_art_url`
+``` ruby
+if playlist.songs.length > 0
+  song = playlist.songs.sample
+  json.album_art song.album.cover_art_url
+end
+```
 
 ### Site Features:
 
@@ -33,3 +38,7 @@ When viewing a playlist, the Songlist associations are used to select a random s
  8.	HTML
  9.	SCSS/CSS
 
+### Features to be Implemented:
+ 1. Player functionality
+ 2. Interface for selecting songs and albums
+ 3. Ellipses to hide and show additional options
