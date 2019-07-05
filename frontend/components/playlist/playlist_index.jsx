@@ -11,6 +11,13 @@ class PlaylistIndex extends React.Component {
     this.props.fetchSongs();
   }
 
+//   componentDidUpdate(prevProps) {
+// //     if (prevProps.playlist.id != this.props.match.params.playlistId) {
+//     // this.props.fetchSongs();
+//       this.props.fetchPlaylist(this.props.match.params.playlistId);
+// //     }
+//   }
+
   render() {
     const playlists = this.props.playlists.map(playlist => {
       return (
@@ -42,6 +49,9 @@ class PlaylistIndex extends React.Component {
               {playlists}
             </ul>
           </div>
+        <div id='create-pl-cnt'>
+          <CreatePlaylistFormContainer />
+        </div>
           <div className='songs-cnt'>
             <h2 className="h2-pl">All Songs</h2>
             <br/>
@@ -50,9 +60,6 @@ class PlaylistIndex extends React.Component {
             </ul>
           </div>
           <div className='pl-idx-background'></div>
-        </div>
-        <div id='create-pl-cnt'>
-          <CreatePlaylistFormContainer />
         </div>
       </div>
     );

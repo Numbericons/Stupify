@@ -27,6 +27,7 @@ class PlaylistForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>Name
             <input
+              id='pl-name-input'
               type="text"
               value={this.state.name}
               onChange={this.update('name')} />

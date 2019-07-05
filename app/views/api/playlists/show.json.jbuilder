@@ -1,5 +1,9 @@
 json.set! :playlist do 
-    json.set! @playlist.id do 
+    json.set! @playlist.id do
+        if @playlist.songs.length > 0
+            song = @playlist.songs.sample
+            json.album_art song.album.cover_art_url
+        end
         json.partial! "api/playlists/playlist", playlist: @playlist
     end
 end

@@ -67,7 +67,7 @@ class PlaylistShow extends React.Component {
           <div className='song-list-header'>
             <div className='pl-info-pane-cnt'>
               <div id='pl-info-cnt'>
-                <img id='pl-show-art' src={window.hamilton} />
+                <img id='pl-show-art' src={playlist.album_art} />
                 <div id='pl-title-cnt'>
                   <h2 id='pl-title'>{playlist.name}</h2>
                 </div>
