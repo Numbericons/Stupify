@@ -86,12 +86,28 @@ h5 {
     opacity: .7;
     font-weight: 250;
 }
+#album-grey-font {
+    font-size: 14px;
+    font-family: 'Cabin', sans-serif;
+    color: white;
+    opacity: .7;
+    font-weight: 250;
+    transform: translate(0px, 7px);
+}
 
 #song-title {
     font-size: 16px;
     font-family: 'Cabin', sans-serif;
     color: white;
     font-weight: 250;
+}
+
+#album-title {
+    font-size: 16px;
+    font-family: 'Cabin', sans-serif;
+    color: white;
+    font-weight: 250;
+    margin-top: 17px;
 }
 
 .song-duration {

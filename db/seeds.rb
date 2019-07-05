@@ -8,14 +8,31 @@
 # email = potterArr.map{|capStr| capStr.split("").reject{|char| char == " " }.join("").downcase}
 
 User.create(username: 'Demo User', email: 'demo', password: '123456')
+
 Artist.create(name: 'Lin-Manuel Miranda', mon_listeners: 1000000, image_url: 'www.puertorico.com')
-Album.create(name: 'Hamilton', artist_id: 1, year: 2015, cover_art_url: 'www.hamilton.com')
+Artist.create(name: 'Spearhead', mon_listeners: 500000, image_url: 'www.metta.com')
+Artist.create(name: 'Guilhem Desq', mon_listeners: 200000, image_url: 'www.hurdy.com')
+Artist.create(name: 'SOJA', mon_listeners: 200000, image_url: 'www.muirbeach.com')
+
+Album.create(name: 'Hamilton', artist_id: 1, year: 2015, cover_art_url: 'http://charlottemagazine-images.dashdigital.com/images/cache/cache_0/cache_9/cache_1/Hamilton400-aafdb190.jpeg?ver=1453860567&aspectratio=1')
+Album.create(name: 'Chocolate Supa Highway', artist_id: 2, year: 1997, cover_art_url: 'https://img.discogs.com/Bxz9CaABzChlO01V-xPCBHAXXKo=/fit-in/600x593/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3303632-1324848913.jpeg.jpg')
+Album.create(name: 'Visions', artist_id: 3, year: 2017, cover_art_url: 'https://f4.bcbits.com/img/a3654949040_10.jpg')
+Album.create(name: 'Amid the Noise and Haste', artist_id: 4, year: 2014, cover_art_url: 'https://i2.wp.com/www.sojamusic.com/wpsite/wp-content/uploads/2014/08/soja_amid_1500_rgb.jpeg?fit=640%2C640')
+
 Song.create(title: 'Alexander Hamilton', album_id: 1, song_url: 'www.stupify/albums/1/alexanderhamilton', track_num: 1, duration: 237, plays: 1000000)
 Song.create(title: 'Aaron Burr, Sir', album_id: 1, song_url: 'www.stupify/albums/1/aaronburrsir', track_num: 2, duration: 157, plays: 1000000)
 Song.create(title: 'My Shot', album_id: 1, song_url: 'www.stupify/albums/1/myshot', track_num: 3, duration: 333, plays: 1000000)
 Song.create(title: 'Right Hand Man', album_id: 1, song_url: 'www.stupify/albums/1/righthandman', track_num: 8, duration: 180, plays: 1000000)
 Song.create(title: 'Satisfied', album_id: 1, song_url: 'www.stupify/albums/1/satisfied', track_num: 11, duration: 329, plays: 1000000)
 Song.create(title: 'Wait for It', album_id: 1, song_url: 'www.stupify/albums/1/waitforit', track_num: 13, duration: 194, plays: 1000000)
+Song.create(title: 'Food For That Masses', album_id: 2, song_url: 'www.stupify/albums/', track_num: 4, duration: 302, plays: 50000)
+Song.create(title: "U Can't Sing R Song", album_id: 2, song_url: 'www.stupify/albums/', track_num: 5, duration: 327, plays: 40000)
+Song.create(title: "Wayfarin' Stranger", album_id: 2, song_url: 'www.stupify/albums/', track_num: 13, duration: 328, plays: 333333)
+Song.create(title: "Le chateau magique", album_id: 3, song_url: 'www.stupify/albums/', track_num: 1, duration: 250, plays: 222222)
+Song.create(title: "Omen", album_id: 3, song_url: 'www.stupify/albums/', track_num: 6, duration: 221, plays: 222222)
+Song.create(title: "Tear It Down", album_id: 4, song_url: 'www.stupify/albums/', track_num: 1, duration: 249, plays: 111111)
+Song.create(title: "Talking To Myself", album_id: 4, song_url: 'www.stupify/albums/', track_num: 15, duration: 222, plays: 111111)
+
 Playlist.create(owner_id: 1, name: 'Hammy')
 Songlist.create(song_id: 1, playlist_id: 1)
 

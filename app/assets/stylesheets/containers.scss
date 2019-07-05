@@ -191,7 +191,16 @@
     justify-content: center;
 }
 
-#pl-select-show-cnt {
-    color: white;
-    font-size: 27px;
+#album-art-cnt {
+    display: flex;
+    height: 275px;
+    width: 215px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#album-art {
+    height: 215px;
+    width: 215px;
 }

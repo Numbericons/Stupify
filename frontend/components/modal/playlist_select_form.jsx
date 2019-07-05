@@ -19,10 +19,12 @@ class PlaylistSelectForm extends React.Component {
     const playlists = Object.values(this.props.playlists).map((playlist, i) => {
     return (
         <div onClick={(e) => this.handleSubmit(e, playlist.id)} key={i}>
-            <div id='pl-select-show-cnt'>
-              {playlist.name}
-            </div>
-            {/* <img src=""/>  cover album */}
+          <div id='album-art-cnt'>
+            <img id='album-art' src={playlist.album_art} />
+            <div id='album-title'>{playlist.name}</div>
+            <br/>
+            <div id='album-grey-font'>{playlist.count} songs</div>
+          </div>
         </div>
         // <input type="checkbox" name={playlist.name} value={playlist.name}/>
       );
