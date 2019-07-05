@@ -22,3 +22,25 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+### Technologies used
+ 1.	Javascript
+ 2.	Ruby on Rails
+ 3.	PostgreSQL
+ 4.	HTML
+ 5.	SCSS/CSS
+
+### Libraries used:
+
+* Bcrypt for User authentication
+* jQuery using AJAX
+* React.js 
+* Redux
+
+
+
+### Features:
+
+* User Authentication - Login and Signup
+* Browse songs and playlists
+* Create Playlists and add songs
