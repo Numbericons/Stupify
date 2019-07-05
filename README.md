@@ -21,6 +21,22 @@ if playlist.songs.length > 0
 end
 ```
 
+To create a core cast of characters for the users in the database, the Ruby Faker gem was utilized. Each user is based on a Harry Potter character with emails based on locations in the Wizarding and Muggle worlds. A sample domain appropriate for good British wizard children and adults is added to complete the email address.
+
+``` ruby
+domains = ['.com', '.co', '.edu', '.uk', '.wiz']
+symbols = "!@#$%^&*()-+=[];:,<>/?'|\`~ "
+50.times do
+    newUser = Faker::Movies::HarryPotter.character
+    emailName = newUser.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
+
+    location = Faker::Movies::HarryPotter.location
+    site = location.split('').reject{ |ch| symbols.include?(ch) }.join("").downcase
+
+    email = emailName + rand(100).to_s + "@" + site + domains[rand(4)]
+    User.create(username: newUser, email: email, password: '123456')
+end
+```
 ### Site Features:
 
 * User Authentication - Login and Signup
