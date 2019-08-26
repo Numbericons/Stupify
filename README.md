@@ -48,7 +48,7 @@ end
  2. Ruby on Rails
  3. Bcrypt for User Auth
  4. jQuery for backend AJAX requests
- 5. Javascript
+ 5. JavaScript
  6. React.js
  7. Redux
  8.	HTML
