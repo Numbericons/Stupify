@@ -2,8 +2,8 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import PlaylistIndexContainer from './playlist/playlist_index_container'
-import PlaylistShowContainer from './playlist/playlist_show_container'
+import PlaylistIndexContainer from './playlist/playlist_index_container.jsx';
+import PlaylistShowContainer from './playlist/playlist_show_container';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 

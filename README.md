@@ -43,6 +43,13 @@ end
 * Browse songs and playlists
 * Create Playlists and add songs
 
+### Installation
+ 1.	npm install
+ 2. rails db:setup
+ 3. To Run (2 tabs)
+   1. npm run webpack
+   2. rails s
+
 ### Technologies and Libraries:
  1.	PostgreSQL
  2. Ruby on Rails
