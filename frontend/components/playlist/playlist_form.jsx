@@ -24,17 +24,16 @@ class PlaylistForm extends React.Component {
   render () {
     return (
       <div>
-        <h3>'Create new playlist'</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>Name
+          <label>
             <input
               id='pl-name-input'
-              type="text"
+              type="text-area"
               value={this.state.name}
               onChange={this.update('name')} />
           </label>
 
-          <input type="submit" value='Create' />
+          <input className="btn" type="submit" value='Create' />
         </form>
       </div>
     );
