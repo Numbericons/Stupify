@@ -7,7 +7,7 @@ const SongShowItem = ({ playlistId, song, addSonglist, openModal }) => {
     <li>
       {song.title}
 
-      <button onClick={(e) => openModal('selectPlaylist', song.id)}>AddToPlaylist</button>
+      <button className="small-btn-long" onClick={(e) => openModal('selectPlaylist', song.id)}>Add To Playlist</button>
       {/* <button onClick={(e) => addSonglist(2, song.id)}>AddToPlaylist</button> */}
       {/* <button onClick={(e) => addSonglist(playlistId, song.id)}>AddToPlaylist</button> */}
     </li>

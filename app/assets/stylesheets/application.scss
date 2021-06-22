@@ -13,17 +13,17 @@
  *= require_self
  */
  
- @import "./reset.scss";
- @import "./buttons.scss";
- @import "./headers.scss";
- @import "./lines.scss";
- @import "./errors.scss";
- @import "./forms.scss";
- @import "./navbar.scss";
- @import "./containers.scss";
- @import "./playlists.scss";
- @import "./player.scss";
- @import "./modal.scss";
+ @import "./reset";
+ @import "./buttons";
+ @import "./headers";
+ @import "./lines";
+ @import "./errors";
+ @import "./forms";
+ @import "./navbar";
+ @import "./containers";
+ @import "./playlists";
+ @import "./player";
+ @import "./modal";
  
  input {
      width: 450px;

@@ -27,13 +27,13 @@ class PlaylistForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             <input
-              id='pl-name-input'
+              className='pl-name-input'
               type="text-area"
               value={this.state.name}
               onChange={this.update('name')} />
           </label>
 
-          <input className="btn" type="submit" value='Create' />
+          <input className="small-btn" type="submit" value='Create' />
         </form>
       </div>
     );
