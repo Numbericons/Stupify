@@ -6,6 +6,7 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "babel-loader": "^8.2.1",
+    "node-sass": "^6.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.2",
@@ -26,7 +27,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
     "postinstall": "webpack",
-    "start": "webpack --mode=production --watch"
+    "start": "webpack --mode=production --watch",
+    "sass": "sass --watch app/assets/stylesheets/application.scss:app/assets/stylesheets/output.css"
   },
   "repository": {
     "type": "git",
