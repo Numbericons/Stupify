@@ -71,26 +71,26 @@ class PlaylistIndex extends React.Component {
                 <div className="curr-side-line-extd"></div>
               </div>
               <div id='curr-user-cnt'>
-                <img className="pl-side-sm-icon" src={window.user} />
+                <img className="pl-side-sm-icon-user" src={window.user} />
                 {/* <p id='curr-user-text'>{this.props.currUser.toLowerCase()}</p> */}
                 {/* <button className="logout-btn" onClick={this.props.logout}>Log Out</button> */}
               </div>
             </div>
           </div>
           <Modal/>
-          <div id='song-list-header'>
+          <div className='song-list-header'>
             <div className='pl-info-pane-cnt'>
               <h2 className='nav-head-text'>Playlists</h2>
               <br/>
               <ul>
                 {playlists}
               </ul>
-            </div>
-            <div id='playlist-cnt'>
               <CreatePlaylistFormContainer />
             </div>
+            {/* <div id='playlist-cnt'>
+            </div> */}
             <div className='songs-cnt'>
-              <h2 className="h2-pl">All Songs</h2>
+              <h2 className="nav-head-text">All Songs</h2>
               <br/>
               <ul>
                   {dispSongs}
@@ -98,29 +98,29 @@ class PlaylistIndex extends React.Component {
             </div>
             {/* <div className='pl-idx-background'></div> */}
           </div>
-            <div id='player-cnt'>
-              <div id='player-song-info'>
-                <img id="player-heart-no" src={window.heartno} />
-                {/* <img id="player-heart-yes" src={window.heartyes} /> */}
-              </div>
-              <div id='player-control-ctn'>
-                <img id="player-random" src={window.random} />
-                <img id="player-back" src={window.back} />
-                <img id="player-play" src={window.playbtn} />
-                <img id="player-forward" src={window.forward} />
-                <img id="player-repeat" src={window.repeat} />
-                {/* <div id='song-progress-cnt'> */}
-                <div className="song-progress-cont">
-                  {/* <div>00:00</div> */}
-                  <div className="song-progress"></div>
-                  {/* <div>03:16</div> */}
-              </div>
-              <div id='player-volume-ctn'>
-                <img id="player-volume-up" src={window.volumeup} />
-                <div className="or-volume-cont">
-                  <div className="or-side-line-extd"></div>
-                </div>
-              </div>
+        </div>
+        <div id='player-cnt'>
+          <div id='player-song-info'>
+            <img id="player-heart-no" src={window.heartno} />
+            {/* <img id="player-heart-yes" src={window.heartyes} /> */}
+          </div>
+          <div id='player-control-ctn'>
+            <img id="player-random" src={window.random} />
+            <img id="player-back" src={window.back} />
+            <img id="player-play" src={window.playbtn} />
+            <img id="player-forward" src={window.forward} />
+            <img id="player-repeat" src={window.repeat} />
+            {/* <div id='song-progress-cnt'> */}
+            <div className="song-progress-cont">
+              {/* <div>00:00</div> */}
+              <div className="song-progress"></div>
+              {/* <div>03:16</div> */}
+            </div>
+          </div>
+          <div id='player-volume-ctn'>
+            <img id="player-volume-up" src={window.volumeup} />
+            <div className="or-volume-cont">
+              <div className="or-side-line-extd"></div>
             </div>
           </div>
         </div>
