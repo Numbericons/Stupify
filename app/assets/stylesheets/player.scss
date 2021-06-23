@@ -8,8 +8,8 @@
     padding: 0px 16px;
     display: flex;
     // justify-content: center;
-    justify-content: space-around;
-    align-items: center;
+    // justify-content: space-around;
+    // align-items: center;
     position: fixed;
     bottom: 0;
     width: 100%
@@ -63,6 +63,7 @@
     justify-content: space-around;
     height: 100%;
     align-items: center;
+    margin-left: 8%;
 }
 #player-control-ctn {
     display: flex;
@@ -73,6 +74,7 @@
     align-self: flex-end;
     transform: translate(18px, -2px);
     flex-wrap: wrap;
+    margin-left: 31%;
 }
 
 #player-volume-ctn {
@@ -80,7 +82,8 @@
     justify-content: space-around;
     height: 100%;
     align-items: center;
-    transform: translate(150px, 0px)
+    transform: translate(150px, 0px);
+    margin-left: 18%;
 }
 
 .song-progress-cont {

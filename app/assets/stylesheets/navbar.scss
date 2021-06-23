@@ -88,17 +88,23 @@
 }
 
 .sidebar-cnt {
-    width: 287px;
-    background-color: rgba(0,0,0,.9);
+    height: 94vh;
+    width: 14%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
 .pl-side-sm-icon {
-    height: 24px;
-    width: 24px;
+    height: 3.5vh;
     filter: invert(97%) sepia(9%) saturate(0%) hue-rotate(191deg) brightness(83%) contrast(93%);
+    &-user {
+        height: 3.5vh;
+        filter: invert(97%) sepia(9%) saturate(0%) hue-rotate(191deg) brightness(83%) contrast(93%);
+        margin-left: .5vw;
+    }
 }
 
 .pl-select-close {

@@ -388,16 +388,21 @@ h5 {
   width: 100%; }
 
 .sidebar-cnt {
-  width: 287px;
+  height: 94vh;
+  width: 14%;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   align-items: flex-end; }
 
 .pl-side-sm-icon {
-  height: 24px;
-  width: 24px;
+  height: 3.5vh;
   filter: invert(97%) sepia(9%) saturate(0%) hue-rotate(191deg) brightness(83%) contrast(93%); }
+  .pl-side-sm-icon-user {
+    height: 3.5vh;
+    filter: invert(97%) sepia(9%) saturate(0%) hue-rotate(191deg) brightness(83%) contrast(93%);
+    margin-left: .5vw; }
 
 .pl-select-close {
   height: 31px;
@@ -464,7 +469,7 @@ h5 {
 .songs-cnt {
   display: flex;
   flex-direction: column;
-  margin-top: 30px; }
+  margin: 1vh 0vw 0vh 30vw; }
 
 #pl-index-cnt {
   display: flex;
@@ -500,8 +505,7 @@ h5 {
 
 #pl-show-big-cnt {
   display: flex;
-  width: 100%;
-  height: 900px; }
+  height: 94vh; }
 
 .pl-album-cnt {
   width: 230px;
@@ -524,6 +528,7 @@ h5 {
 .song-list-header {
   display: flex;
   margin: 0 0 20px;
+  margin-left: 14%;
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -642,8 +647,6 @@ h5 {
   background-color: #282828;
   padding: 0px 16px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%; }
@@ -691,7 +694,8 @@ h5 {
   display: flex;
   justify-content: space-around;
   height: 100%;
-  align-items: center; }
+  align-items: center;
+  margin-left: 8%; }
 
 #player-control-ctn {
   display: flex;
@@ -701,14 +705,16 @@ h5 {
   width: 220px;
   align-self: flex-end;
   transform: translate(18px, -2px);
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-left: 31%; }
 
 #player-volume-ctn {
   display: flex;
   justify-content: space-around;
   height: 100%;
   align-items: center;
-  transform: translate(150px, 0px); }
+  transform: translate(150px, 0px);
+  margin-left: 18%; }
 
 .song-progress-cont {
   width: 250px;
