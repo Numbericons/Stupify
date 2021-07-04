@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // const SongShowItem = ({ song, removePlaylist }) => {
 const SongShowItem = ({ playlistId, song, addSonglist, openModal }) => {
   return (
-    <li>
+    <li className="show-song">
       {song.title}
 
       <button className="small-btn-long" onClick={(e) => openModal('selectPlaylist', song.id)}>Add To Playlist</button>

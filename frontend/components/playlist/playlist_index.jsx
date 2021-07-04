@@ -34,7 +34,6 @@ class PlaylistIndex extends React.Component {
         dispSongs = this.props.songs.map((song,i) => {
         return (
             < SongShowAddItem song={song} key={i} addSonglist={this.props.addSonglist} openModal={this.props.openModal} />
-            // <li> {song.title}</li>
         );
         });
     }

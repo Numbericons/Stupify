@@ -14,9 +14,9 @@ Artist.create(name: 'Spearhead', mon_listeners: 500000, image_url: 'www.metta.co
 Artist.create(name: 'Guilhem Desq', mon_listeners: 200000, image_url: 'www.hurdy.com')
 Artist.create(name: 'SOJA', mon_listeners: 200000, image_url: 'www.muirbeach.com')
 
-Album.create(name: 'Hamilton', artist_id: 1, year: 2015, cover_art_url: 'http://charlottemagazine-images.dashdigital.com/images/cache/cache_0/cache_9/cache_1/Hamilton400-aafdb190.jpeg?ver=1453860567&aspectratio=1')
+Album.create(name: 'Hamilton', artist_id: 1, year: 2015, cover_art_url: 'https://upload.wikimedia.org/wikipedia/en/5/5b/Hamilton_cast_recording_cover.jpeg')
 Album.create(name: 'Chocolate Supa Highway', artist_id: 2, year: 1997, cover_art_url: 'https://img.discogs.com/Bxz9CaABzChlO01V-xPCBHAXXKo=/fit-in/600x593/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3303632-1324848913.jpeg.jpg')
-Album.create(name: 'Visions', artist_id: 3, year: 2017, cover_art_url: 'https://f4.bcbits.com/img/a3654949040_10.jpg')
+Album.create(name: 'Visions', artist_id: 3, year: 2017, cover_art_url: 'https://m.media-amazon.com/images/I/71XB9aVUk9L._SS500_.jpg')
 Album.create(name: 'Amid the Noise and Haste', artist_id: 4, year: 2014, cover_art_url: 'https://i2.wp.com/www.sojamusic.com/wpsite/wp-content/uploads/2014/08/soja_amid_1500_rgb.jpeg?fit=640%2C640')
 
 Song.create(title: 'Alexander Hamilton', album_id: 1, song_url: 'www.stupify/albums/1/alexanderhamilton', track_num: 1, duration: 237, plays: 1000000)
