@@ -301,6 +301,9 @@ h5 {
   font-style: italic;
   font-size: 20px; }
 
+.show-song {
+  color: white; }
+
 .logo {
   width: 90px;
   height: 90px; }
