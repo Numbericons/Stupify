@@ -644,6 +644,12 @@ h5 {
   justify-content: space-between;
   flex-wrap: wrap; }
 
+.playlist-index {
+  display: flex;
+  align-items: center; }
+.playlist-show-item {
+  color: white; }
+
 #player-cnt {
   height: 90px;
   background: linear-gradient(#595959 0, #282828 67%);

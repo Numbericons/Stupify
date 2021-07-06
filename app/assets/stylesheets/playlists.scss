@@ -30,3 +30,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.playlist{
+    &-index{
+        display: flex;
+        align-items: center;
+    }
+    &-show{
+        &-item{
+            color: white;
+        }
+    }
+}
