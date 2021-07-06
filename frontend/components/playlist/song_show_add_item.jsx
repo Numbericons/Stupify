@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// const SongShowItem = ({ song, removePlaylist }) => {
 const SongShowItem = ({ playlistId, song, addSonglist, openModal }) => {
   return (
     <li className="show-song">
