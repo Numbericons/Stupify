@@ -25,9 +25,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch",
+    "webpack": "webpack --mode=development --watch",
     "postinstall": "webpack",
-    "start": "webpack --mode=production --watch",
+    "start": "webpack --mode=production --watch --no-cache",
     "sass": "sass --watch app/assets/stylesheets/application.scss:app/assets/stylesheets/output.css"
   },
   "repository": {

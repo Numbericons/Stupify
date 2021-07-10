@@ -11,7 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 // }
 
 const App = () => {
-
+  debugger;
   return (
     <div>
     {/* <header>

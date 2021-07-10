@@ -7,6 +7,7 @@ import { openModal } from '../../actions/modal_actions';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
+    debugger;
     return ({
         playlists: Object.keys(state.entities.playlists).map(id => state.entities.playlists[id]),
         songs: Object.keys(state.entities.songs).map(id => state.entities.songs[id]),

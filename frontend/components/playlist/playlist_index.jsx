@@ -21,6 +21,7 @@ class PlaylistIndex extends React.Component {
 
 
   render() {
+    debugger;
     const playlists = this.props.playlists.map(playlist => {
       return (
         <PlaylistIndexItem
@@ -37,7 +38,6 @@ class PlaylistIndex extends React.Component {
         );
         });
     }
-    
     
     return (
       <div>
@@ -70,7 +70,7 @@ class PlaylistIndex extends React.Component {
                 <div className="curr-side-line-extd"></div>
               </div>
               <div id='curr-user-cnt'>
-                <img className="pl-side-sm-icon-user" src={window.user} />
+                <img className="pl-side-sm-icon-user" src={this.props.currUser} />
                 <p id='curr-user-text'>{this.props.currUser.toLowerCase()}</p>
                 {/* <button className="logout-btn" onClick={this.props.logout}>Log Out</button> */}
               </div>
@@ -86,8 +86,6 @@ class PlaylistIndex extends React.Component {
               </ul>
               <CreatePlaylistFormContainer />
             </div>
-            {/* <div id='playlist-cnt'>
-            </div> */}
             <div className='songs-cnt'>
               <h2 className="nav-head-text">All Songs</h2>
               <br/>
