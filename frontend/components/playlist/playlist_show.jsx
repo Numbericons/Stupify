@@ -14,7 +14,6 @@ class PlaylistShow extends React.Component {
 //   }
 
   render() {
-    debugger;
     const { playlist } = this.props;
     if (!playlist) {
       return <div>Loading...</div>;
@@ -61,7 +60,7 @@ class PlaylistShow extends React.Component {
                     <div className="curr-side-line-extd"></div>
                   </div>
                   <div id='curr-user-cnt'>
-                  <img className="pl-side-sm-icon-user" src={this.props.currUser} />
+                  <img className="pl-side-sm-icon-user" src={window.user} />
                     <p id='curr-user-text'>{this.props.currUser.toLowerCase()}</p>
                     {/* <button className="logout-btn" onClick={this.props.logout}>Log Out</button> */}
                   </div>
