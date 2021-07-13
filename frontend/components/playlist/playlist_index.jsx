@@ -10,6 +10,7 @@ class PlaylistIndex extends React.Component {
   componentDidMount() {
     this.props.fetchPlaylists();
     this.props.fetchSongs();
+    this.play = this.play.bind(this);
   }
 
 //   componentDidUpdate(prevProps) {
@@ -18,7 +19,10 @@ class PlaylistIndex extends React.Component {
 //       this.props.fetchPlaylist(this.props.match.params.playlistId);
 // //     }
 //   }
-
+  play(e) {
+    let audioObj3 = new Audio("https://stupify-dev.s3.us-west-1.amazonaws.com/Songs/ModChina100.mp3");
+    audioObj3.play();
+  }
 
   render() {
     const playlists = this.props.playlists.map(playlist => {
@@ -42,7 +46,7 @@ class PlaylistIndex extends React.Component {
         <div id='pl-show-big-cnt'>
           <div className='sidebar-cnt'>
             <div className='logo-box-pl'>
-              <img className='nav-logo-pl' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" />
+              <img className='nav-logo-pl' src="https://stupify-dev.s3.us-west-1.amazonaws.com/logo.svg.png" />
               <h2 className='nav-head-text-player'>Stupify</h2>
             </div>
             <br />
@@ -102,7 +106,7 @@ class PlaylistIndex extends React.Component {
           <div id='player-control-ctn'>
             <img id="player-random" src={window.random} />
             <img id="player-back" src={window.back} />
-            <img id="player-play" src={window.playbtn} />
+            <img id="player-play" src={window.playbtn} onClick={this.play}/>
             <img id="player-forward" src={window.forward} />
             <img id="player-repeat" src={window.repeat} />
             {/* <div id='song-progress-cnt'> */}

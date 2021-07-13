@@ -728,7 +728,8 @@ h5 {
 .song-progress-cont {
   width: 250px;
   height: 50px;
-  transform: translate(0px, -30px); }
+  transform: translate(0px, -30px);
+  z-index: -1; }
 
 .song-progress {
   width: 100%;

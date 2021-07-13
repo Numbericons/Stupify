@@ -13,7 +13,7 @@ const Greeting = ({ currentUser, logout, location }) => {
       <div className='splash-back'>
         <div className='nav-bar-auth'>
           <div className='logo-box'>
-            <img className='nav-logo-greet' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"/>
+            <img className='nav-logo-greet' src="https://stupify-dev.s3.us-west-1.amazonaws.com/logo.svg.png"/>
             <h2 className='nav-head-text'>Stupify</h2>
           </div>
           <nav className="login-signup">

@@ -34,7 +34,7 @@ class PlaylistShow extends React.Component {
         <div id='pl-show-big-cnt'>
           <div className='sidebar-cnt'>
             <div className='logo-box-pl'>
-              <img className='nav-logo-pl' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"/>
+              <img className='nav-logo-pl' src="https://stupify-dev.s3.us-west-1.amazonaws.com/logo.svg.png"/>
               <h2 className='nav-head-text-player'>Stupify</h2>
             </div>
               <br/>
