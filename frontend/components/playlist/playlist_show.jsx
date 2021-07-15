@@ -30,32 +30,30 @@ class PlaylistShow extends React.Component {
       playlist.album_art = window.albummissing;
     }
     return (
-      <div>
-        <div id='pl-show-big-cnt'>
-          <div className='song-list-header'>
-            <div className='pl-info-pane-cnt'>
-              <div id='pl-info-cnt'>
-                <img id='pl-show-art' src={playlist.album_art} />
-                <div id='pl-title-cnt'>
-                  <h2 id='pl-title'>{playlist.name}</h2>
-                </div>
-                <button className='play-btn'>PLAY</button>
-                <br/>
-                <div id='song-grey-font'>
-                  {this.props.songs.length} SONGS
-                </div>
+      <div id='pl-show-big-cnt'>
+        <div className='song-list-header'>
+          <div className='pl-info-pane-cnt'>
+            <div id='pl-info-cnt'>
+              <img id='pl-show-art' src={playlist.album_art} />
+              <div id='pl-title-cnt'>
+                <h2 id='pl-title'>{playlist.name}</h2>
               </div>
-            </div>
-            <div className='playlist-cnt'>
-              <div className='songs-cnt'>
-                  <ul>
-                      {dispSongs}
-                  </ul>
+              <button className='play-btn'>PLAY</button>
+              <br/>
+              <div id='song-grey-font'>
+                {this.props.songs.length} SONGS
               </div>
             </div>
           </div>
-          {/* <Player/> */}
+          <div className='playlist-cnt'>
+            <div className='songs-cnt'>
+                <ul>
+                    {dispSongs}
+                </ul>
+            </div>
+          </div>
         </div>
+        {/* <Player/> */}
       </div>
     );
   }

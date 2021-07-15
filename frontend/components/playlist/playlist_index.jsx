@@ -44,25 +44,23 @@ class PlaylistIndex extends React.Component {
     }
 
     return (
-      <div>
-        <div id='pl-show-big-cnt'>
-          <Modal/>
-          <div className='song-list-header'>
-            <div className='pl-info-pane-cnt'>
-              <h2 className='nav-head-text'>Playlists</h2>
-              <br/>
-              <ul>
-                {playlists}
-              </ul>
-              <CreatePlaylistFormContainer />
-            </div>
-            <div className='songs-cnt'>
-              <h2 className="nav-head-text">All Songs</h2>
-              <br/>
-              <ul>
-                  {dispSongs}
-              </ul>
-            </div>
+      <div id='pl-show-big-cnt'>
+        <Modal/>
+        <div className='song-list-header'>
+          <div className='pl-info-pane-cnt'>
+            <h2 className='nav-head-text'>Playlists</h2>
+            <br/>
+            <ul>
+              {playlists}
+            </ul>
+            <CreatePlaylistFormContainer />
+          </div>
+          <div className='songs-cnt'>
+            <h2 className="nav-head-text">All Songs</h2>
+            <br/>
+            <ul>
+                {dispSongs}
+            </ul>
           </div>
         </div>
       </div>
