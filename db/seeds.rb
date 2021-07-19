@@ -25,7 +25,7 @@ Song.create(title: 'My Shot', album_id: 1, song_url: 'www.stupify/albums/1/mysho
 Song.create(title: 'Right Hand Man', album_id: 1, song_url: 'www.stupify/albums/1/righthandman', track_num: 8, duration: 180, plays: 1000000)
 Song.create(title: 'Satisfied', album_id: 1, song_url: 'www.stupify/albums/1/satisfied', track_num: 11, duration: 329, plays: 1000000)
 Song.create(title: 'Wait for It', album_id: 1, song_url: 'www.stupify/albums/1/waitforit', track_num: 13, duration: 194, plays: 1000000)
-Song.create(title: 'Food For That Masses', album_id: 2, song_url: 'www.stupify/albums/', track_num: 4, duration: 302, plays: 50000)
+Song.create(title: 'Food For The Masses', album_id: 2, song_url: 'www.stupify/albums/', track_num: 4, duration: 302, plays: 50000)
 Song.create(title: "U Can't Sing R Song", album_id: 2, song_url: 'www.stupify/albums/32', track_num: 5, duration: 327, plays: 40000)
 Song.create(title: "Wayfarin' Stranger", album_id: 2, song_url: 'www.stupify/albums/12', track_num: 13, duration: 328, plays: 333333)
 Song.create(title: "Le chateau magique", album_id: 3, song_url: 'www.stupify/albums/777', track_num: 1, duration: 250, plays: 222222)

@@ -34,3 +34,5 @@ npm-debug.log
 
 /app/assets/stylesheets/output.css
 /app/assets/stylesheets/output.css.map
+
+/app/assets/songs
